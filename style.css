@@ -10,6 +10,12 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: 'vmo';
+  src: url('VictorMono-Oblique.woff2') format(woff2);
+  font-style: normal;
+  font-weight: normal;
+}
 
 #f1 {
   font-family: 'cot';
@@ -18,5 +24,5 @@
   font-family: 'vmi';
 }
 #f3 {
-  font-family: 'vmi';
+  font-family: 'vmo';
 }
