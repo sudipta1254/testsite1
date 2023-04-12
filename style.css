@@ -4,7 +4,19 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: 'vmi';
+  src: url('VictorMono-Italic.woff2') format(woff2);
+  font-style: normal;
+  font-weight: normal;
+}
 
-#new {
+#f1 {
   font-family: 'cot';
+}
+#f2 {
+  font-family: 'vmi';
+}
+#f3 {
+  font-family: 'vmi';
 }
