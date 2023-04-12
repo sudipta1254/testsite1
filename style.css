@@ -17,12 +17,12 @@
   font-weight: normal;
 }
 
-#f1 {
+.f1 {
   font-family: 'cot';
 }
-#f2 {
+.f2 {
   font-family: 'vmi';
 }
-#f3 {
+.f3 {
   font-family: 'vmo';
 }
