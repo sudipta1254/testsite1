@@ -1,1 +1,10 @@
+@font-face {
+  font-family: 'cot';
+  src: url('Weightless.otf') format(opentype);
+  font-style: normal;
+  font-weight: normal;
+}
 
+#new {
+  font-family: 'cot';
+}
