@@ -16,6 +16,12 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: 'lkr';
+  src: url('Laker.woff') format(woff2);
+  font-style: normal;
+  font-weight: normal;
+}
 
 .f1 {
   font-family: 'cot';
@@ -25,4 +31,7 @@
 }
 .f3 {
   font-family: 'vmo';
+}
+.f4 {
+  font-family: lkr;
 }
