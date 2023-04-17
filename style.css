@@ -2,7 +2,7 @@
   font-family: 'cot';
   src: url('Weightless.otf') format(opentype);
   font-style: normal;
-  font-weight: 200;
+  font-weight: normal;
 }
 @font-face {
   font-family: 'vmi';
@@ -18,7 +18,7 @@
 }
 @font-face {
   font-family: 'lkr';
-  src: url('Laker.woff') format(woff2);
+  src: url('Laker.woff') format(woff);
   font-style: normal;
   font-weight: normal;
 }
