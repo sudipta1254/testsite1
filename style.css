@@ -1,3 +1,7 @@
+body {
+   background-repeat: no-repeat;
+}
+
 @font-face {
   font-family: 'cot';
   src: url('Weightless.otf') format(opentype);
