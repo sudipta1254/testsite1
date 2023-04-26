@@ -48,3 +48,63 @@ body {
 .f7 {
   font-family: 'lkr';
 }
+
+* {
+
+   margin: 0;
+
+   padding: 0;
+
+}
+
+#c1 {
+
+   height: 100vh;
+
+   /*background: url("https://source.unsplash.com/random/1920x1080?nightlife,neondemon,purrple,streetnight,city,night");*/
+
+   background-position: center;
+
+   background-size: cover;
+
+}
+
+.box {
+
+   position: absolute;
+
+   top: 50%;
+
+   left: 50%;
+
+   transform: translate(-50%,-50%);
+
+   height: 100%;
+
+   width: 100%;
+
+   backdrop-filter: blur(2px);
+
+   /*background-color: #222b3369;*/
+
+}
+
+.c2 {
+
+   display: flex;
+
+   position: absolute;
+
+   flex-direction: column;
+
+   gap: 20px;
+
+   top: 50%;
+
+   left: 50%;
+
+   color: white;
+
+   transform: translate(-50%, -50%);
+
+}
