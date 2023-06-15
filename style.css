@@ -40,15 +40,18 @@ body {
 }
 
 .f1 {
-  font-family: 'cot';
+  font-family: 'aur';
 }
 .f2 {
-  font-family: 'vmi';
+  font-family: 'pal';
 }
 .f3 {
-  font-family: 'vmo';
+  font-family: 'cz';
 }
-.f4, .f5 {
+.f4 {
+   font-family: 'coz';
+}
+.f5 {
   font-family: 'bru';
 }
 .f6 {
