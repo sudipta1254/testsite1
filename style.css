@@ -1,5 +1,7 @@
 body {
    background-repeat: no-repeat;
+   color: white;
+   background: black;
 }
 
 @font-face {
@@ -32,6 +34,10 @@ body {
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+   font-family: 'honnie';
+   src: url('Honnie.ttf');
+}
 
 .f1 {
   font-family: 'cot';
@@ -42,11 +48,11 @@ body {
 .f3 {
   font-family: 'vmo';
 }
-.f4, .f5, .f6 {
+.f4, .f5 {
   font-family: 'bru';
 }
-.f7 {
-  font-family: 'lkr';
+.f6 {
+  font-family: 'honnie';
 }
 
 * {
