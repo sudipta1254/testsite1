@@ -2,6 +2,7 @@ body {
    background-repeat: no-repeat;
    color: white;
    background: black;
+   font-size: 30px;
 }
 
 @font-face {
