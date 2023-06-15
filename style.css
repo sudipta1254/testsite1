@@ -5,20 +5,20 @@ body {
 }
 
 @font-face {
-  font-family: 'cot';
-  src: url('Weightless.otf') format(opentype);
+  font-family: 'aur';
+  src: url('aureliamichelle.otf') format(opentype);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'vmi';
-  src: url('VictorMono-Italic.woff2') format(woff2);
+  font-family: 'pal';
+  src: url('Palmist.ttf') format(truetype);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'vmo';
-  src: url('VictorMono-Oblique.woff2') format(woff2);
+  font-family: 'cz';
+  src: url('Comfycozies.otf') format(opentype);
   font-style: normal;
   font-weight: normal;
 }
@@ -29,8 +29,8 @@ body {
   font-weight: normal;
 }
 @font-face {
-  font-family: 'lkr';
-  src: url('Laker.woff') format(woff);
+  font-family: 'czo';
+  src: url('ComfycoziesOblique.otf') format(opentype);
   font-style: normal;
   font-weight: normal;
 }
