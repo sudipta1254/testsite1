@@ -36,7 +36,7 @@ body {
 }
 @font-face {
    font-family: 'honnie';
-   src: url('Honnie.ttf');
+   src: url('Honnie.ttf') format(truetype);
 }
 
 .f1 {
