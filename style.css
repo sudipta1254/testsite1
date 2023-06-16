@@ -39,6 +39,10 @@ body {
    font-family: 'honnie';
    src: url('Honnie.ttf') format(truetype);
 }
+@fint-face {
+   font-family: 'hif';
+   src: url('Highfieldthin.ttf') format(truetype);
+}
 
 .f1 {
   font-family: 'aur';
@@ -57,6 +61,9 @@ body {
 }
 .f6 {
   font-family: 'honnie';
+}
+.f7 {
+   font-family: hif;
 }
 
 * {
