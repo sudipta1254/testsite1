@@ -42,7 +42,7 @@ body {
    font-family: 'honnie';
    src: url('Honnie.ttf') format(truetype);
 }
-@fint-face {
+@font-face {
    font-family: 'hif';
    src: url('Highfieldthin.ttf') format(truetype);
 }
