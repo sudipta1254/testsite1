@@ -46,6 +46,24 @@ body {
    font-family: 'hif';
    src: url('Highfieldthin.ttf') format(truetype);
 }
+@font-face {
+  font-family: 'celine';
+  src: url('CelineSans.otf') format(opentype);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'del';
+  src: url('DelRay.ttf') format(truetype);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'aurelia';
+  src: url('aureliamichelle.otf') format(opentype);
+  font-style: normal;
+  font-weight: normal;
+}
 
 .f1 {
   font-family: 'aur';
@@ -68,6 +86,16 @@ body {
 .f7 {
    font-family: 'hif';
 }
+.f8 {
+   font-family: 'celine';
+}
+.f9 {
+   font-family: 'del';
+}
+.f10 {
+   font-family: 'aurelia';
+}
+
 
 * {
    margin: 0;
