@@ -7,6 +7,9 @@ body {
    font-size: 30px;
    text-align: center;
 }
+input {
+   accent-color: #F55050;
+}
 
 @font-face {
   font-family: 'aur';
