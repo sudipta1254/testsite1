@@ -1,4 +1,4 @@
-let list = 'uuee cyvm egll lfpg uacc zbaa eham ulaa engm eidw panc ellx loww lshz ebbr eddf cyyz eddb eddk uaaa eprz lipz efhk bikf visr', inp = $('input'), ol = $('#fill'), sn = '';
+let list = 'uuee cyvm egll lfpg zbaa eham engm eidw panc ellx loww lshz ebbr eddf cyyz uacc eddb eddk uaaa eprz lipz efhk bikf visr uacc ulaa enbs usss efks bgjn cylt uhma ueee', inp = $('input'), ol = $('#fill'), sn = '';
 
 $('button').click(function() {
    inp.blur();
