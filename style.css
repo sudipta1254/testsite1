@@ -1,11 +1,6 @@
 body {
-   width: 100vw;
-   height: 100vh;
-   background-repeat: no-repeat;
    color: white;
-   background: black;
-   font-size: 30px;
-   text-align: center;
+   background: #212121;
 }
 p {
    text-align: center;
