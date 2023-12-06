@@ -2,7 +2,7 @@ let list = 'uuee cyvm egll lfpg uacc zbaa eham ulaa engm eidw panc ellx loww lsh
 
 $('button').click(function() {
    inp.blur();
-   let id = list.toUpperCase().split(' ');
+   let id = list.split(' ');
    if(inp.val())
       get(inp.val().trim());
     else
