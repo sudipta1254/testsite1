@@ -12,7 +12,7 @@ $('button').click(function() {
       //ol.text('No airport found');
 })
 function get(id, i = 0) {
-      let url = `https://cors-anywhere.herokuapp.com/https://aviationweather.gov/api/data/metar?ids=${id}&format=json`;
+      let url = `https://aviationweather.gov/api/data/metar?ids=${id}&format=json`;
       fetch(url)
       .then(res => {
          if(!res.ok)
