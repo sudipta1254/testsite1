@@ -8,8 +8,8 @@ $('button').click(function() {
     else
       for(let i = 0; i < id.length; i++)
          setTimeout(get(id[i], i), 3000);
-   if(!sn)
-      ol.text('No airport found');
+  // if(!sn)
+      //ol.text('No airport found');
 })
 function get(id, i = 0) {
       let url = `https://cors-anywhere.herokuapp.com/https://aviationweather.gov/api/data/metar?ids=${id}&format=json`;
