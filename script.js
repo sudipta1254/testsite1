@@ -1,6 +1,7 @@
 let list = 'uuee cyvm egll lfpg zbaa eham ulaa engm eidw panc ellx loww lshz ebbr eddf cyyz eddb eddk uaaa eprz lipz efhk bikf visr', inp = $('input'), ol = $('#fill'), sn = '';
 
 $('button').click(function() {
+   inp.blur();
    let id = list.toUpperCase().split(' ');
    if(inp.val())
       get(inp.val().trim());
