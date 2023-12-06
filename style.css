@@ -7,129 +7,30 @@ body {
    font-size: 30px;
    text-align: center;
 }
+p {
+   text-align: center;
+}
 input {
-   accent-color: #F55050;
-}
-
-@font-face {
-  font-family: 'aur';
-  src: url('aureliamichelle.otf') format(opentype);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'pal';
-  src: url('Palmist.ttf') format(truetype);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'cz';
-  src: url('Comfycozies.otf') format(opentype);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'bru';
-  src: url('Bruney.woff') format(woff);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'czo';
-  src: url('ComfycoziesOblique.otf') format(opentype);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-   font-family: 'honnie';
-   src: url('Honnie.ttf') format(truetype);
-}
-@font-face {
-   font-family: 'hif';
-   src: url('Highfieldthin.ttf') format(truetype);
-}
-@font-face {
-  font-family: 'celine';
-  src: url('CelineSans.otf') format(opentype);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'del';
-  src: url('DelRay.ttf') format(truetype);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'aurelia';
-  src: url('aureliamichelle.otf') format(opentype);
-  font-style: normal;
-  font-weight: normal;
-}
-
-.f1 {
-  font-family: 'aur';
-}
-.f2 {
-  font-family: 'pal';
-}
-.f3 {
-  font-family: 'cz';
-}
-.f4 {
-   font-family: 'bru';
-}
-.f5 {
-  font-family: 'czo';
-}
-.f6 {
-  font-family: 'honnie';
-}
-.f7 {
-   font-family: 'hif';
-}
-.f8 {
-   font-family: 'celine';
-}
-.f9 {
-   font-family: 'del';
-}
-.f10 {
-   font-family: 'aurelia';
-}
-
-
-* {
-   margin: 0;
-   padding: 0;
-}
-
-#c1 {
-   height: 100vh;
-   /*background: url("https://source.unsplash.com/random/1920x1080?nightlife,neondemon,purrple,streetnight,city,night");*/
-   background-position: center;
-   background-size: cover;
-}
-
-.box {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%);
-   height: 100%;
-   width: 100%;
-   backdrop-filter: blur(2px);
-   /*background-color: #222b3369;*/
-}
-
-.c2 {
-   display: flex;
-   position: absolute;
-   flex-direction: column;
-   gap: 20px;
-   top: 50%;
-   left: 50%;
    color: white;
-   transform: translate(-50%, -50%);
+   background: black;
+   width: 150px;
+   height: 40px;
+   margin: 20px 50px 0;
+   border-radius: 14px;
+   text-align: center;
+}
+input:focus {
+   outline: none;
+   border: 2px solid teal;
+}
+input:invalid {
+   border: 2px solid red;
+}
+button {
+   width: 60px;
+   height: 30px;
+}
+#fill {
+   margin: 10px 0 0;
+   line-height: 1.8;
 }
