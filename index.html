@@ -8,15 +8,29 @@
     <link rel="stylesheet" href="style.css">
     <title>Test Site</title>
 </head>
-<body oncontextmenu='return false'>
+<body>
     <div><p>Snow Detection ❄️</p></div>
-    <div>
+    <div id='inps'>
         <input type='search' placeholder='Enter ICAO or GO' minlength='4' maxlength='4' autofocus>
         <button>Go</button>
-        
+    </div>
+    <div id='opts'>
+        <span>
+            <label for='awc'>AWC</label>
+            <input type='radio' id='awc' name='w' checked>
+        </span>
+        <span>
+            <label for='cwx'>CWX</label>
+            <input type='radio' id='cwx' name='w'>
+        </span>
+        <span>
+            <label for='avwx'>AVWX</label>
+            <input type='radio' id='avwx' name='w'>
+        </span>
     </div>
     <pre>
-        <ol id='fill'>No airport found</ol>
+        <p>Get airports here...</p>
+        <ol id='fill'></ol>
     </pre>
     <script src='script.js'></script>
 </body>
