@@ -5,7 +5,7 @@ $('button').click(function() {
    let cmp = getComp();
    let id = list.split(' ');
    if(inp.val())
-      get(getUrl(cmp, inp.val().trim()), cmp, id, 0);
+      get(getUrl(cmp, id = inp.val().trim()), cmp, id, 0);
    else
       for(let i = 0; i < id.length; i++)
          get(getUrl(cmp, id[i]), cmp, id[i], i);
@@ -29,15 +29,15 @@ function get(url, cmp, id, i) {
          if(cmp === 'AWC') {
             let dt = data[0];
             if(alt = dt.wxString.includes('SN'))
-               set(id, dt.name, dt.wxString, i);
+               set(id, dt.name, dt.wxString);
          } else if(cmp === 'CWX') {
             let dt = data.data[0];
             if(alt = dt.conditions[0].code.includes('SN'))
-               set(id, dt.station.name+', '+dt.station.location, dt.conditions[0].text, i);
+               set(id, dt.station.name+', '+dt.station.location, dt.conditions[0].text);
          } else {
             let dt = data;
             if(alt = dt.wx_code[0].repr.includes('SN'))
-               set(id, dt.station, dt.wx_code[0].repr, i);
+               set(id, dt.station, dt.wx_code[0].repr);
          }
          if(alt)
             sn = alt;
@@ -47,7 +47,7 @@ function get(url, cmp, id, i) {
       });
 }
 
-function set(id, name, code, i) {
+function set(id, name, code) {
    ol.append(`<li>${id.toUpperCase()} - ${name}  -->  ${code}</li>`);
 }
 function getComp() {
