@@ -60,7 +60,7 @@ function getComp() {
 }
 function getUrl(cmp, id) {
       if(cmp === 'AWC')
-         return `https://cors-anywhere.herokuapp.com/https://aviationweather.gov/api/data/metar?ids=${id}&format=json`;
+         return `https://proxy.cors.sh/https://aviationweather.gov/api/data/metar?ids=${id}&format=json`;
       else if(cmp === 'CWX')
          return `https://api.checkwx.com/metar/${id}/decoded?x-api-key=f6993fa9bf31403c914cad7130`;
       else
