@@ -61,6 +61,17 @@ pre {
 pre p {
    margin: 0;
 }
+#spin img {
+   width: 20px;
+   display: none;
+}
+#grp1 {
+   height: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
 
 @font-face {
    font-family: 'font';

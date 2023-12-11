@@ -1,6 +1,8 @@
-let list = 'uuee cyvm egll lfpg zbaa eham engm eidw panc ellx loww lshz ebbr eddf cyyz uacc eddb eddk uaaa eprz lipz efhk bikf visr ulaa enbs usss efks bgjn cylt uhma ueee', inp = $('input[type="search"]'), ol = $('#fill'), sn = false;
+let list = 'uuee cyvm egll lfpg zbaa eham engm eidw panc ellx loww lshz ebbr eddf cyyz uacc eddb eddk uaaa eprz lipz efhk bikf visr ulaa enbs usss efks bgjn cylt uhma ueee',
+inp = $('input[type="search"]'), ol = $('#fill'), spinner = $('#spin img'), sn = false;
 
 $('button').click(function() {
+   spinner.toggle();
    inp.blur();
    let cmp = getComp();
    let id = list.split(' ');
@@ -9,8 +11,12 @@ $('button').click(function() {
    else
       for(let i = 0; i < id.length; i++)
          get(getUrl(cmp, id[i]), cmp, id[i], i);
-   if(!sn)
+   if(!sn) {
       ol.text('No airport found!');
+      setTimeout(() => {
+         spinner.toggle();
+      }, 1000);
+   }
 })
 function get(url, cmp, id, i) {
       fetch(url)
@@ -68,10 +74,10 @@ function getUrl(cmp, id) {
 }
 
 $('input').keypress(function(event) {
-  if(event.key === "Enter") {
-    event.preventDefault();
-    $('button').click();
-  }
+   if(event.key === "Enter") {
+      event.preventDefault();
+      $('button').click();
+   }
 });
 
 // $('input').on('input', function() {
