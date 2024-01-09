@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sty.css">
+    <title>Query</title>
+</head>
+<body>
+    <form action="qry_get_post.php" method="post">
+        User ID: <input type="number" name="userId">
+        <br><br>
+        Course: <select name="courseId" id="course">
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+        </select>
+        <br><br>
+        Name: <input type="text" name="name">
+        <br><br>
+        Email: <input type="email" name="email">
+        <br><br>
+        Query: 
+        <textarea name="query" id="" cols="30" rows="10" placeholder="Enter query here!"></textarea>
+        <br><br>
+        <input type="submit" value="Submit" name="submit">
+        <input type="submit" value="Show" name="show">
+    </form>
+</body>
+</html>

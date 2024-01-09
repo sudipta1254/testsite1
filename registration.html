@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sty.css">
+    <title>Registration</title>
+</head>
+<body>
+    <form action="./reg_get_post.php" method="post">
+        <label for="course">Course: </label>
+        <select name="courseId" id="course">
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+        </select>
+        <br><br>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <label for="gender">Gender: </label>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" checked>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <br><br>
+        <label for="learnMode">Learning Mode: </label>
+        <select name="learnMode" id="learnMode">
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" name="submit">
+        <input type="submit" value="Show" name="show">
+    </form>
+</body>
+</html>
