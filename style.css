@@ -1,0 +1,255 @@
+._header {
+    font-size: 1.75rem;
+    height: 4rem;
+    width: 100%;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    border-bottom-color: rgb(223, 223, 223);
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-left-color: rgb(223, 223, 223);
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-color: rgb(223, 223, 223);
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-top-color: rgb(223, 223, 223);
+    border-top-style: solid;
+    border-top-width: 0px;
+    box-shadow: rgba(11, 11, 11, 0.06) 0px 2px 4px -1px, rgba(11, 11, 11, 0.1) 0px 4px 6px -1px;
+    box-sizing: border-box;
+    color: rgb(11, 11, 11);
+    color-scheme: light;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0%;
+}
+
+._outermost {
+
+    border-bottom-color: rgb(223, 223, 223);
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-left-color: rgb(223, 223, 223);
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-color: rgb(223, 223, 223);
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-top-color: rgb(223, 223, 223);
+    border-top-style: solid;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(11, 11, 11);
+    color-scheme: light;
+    column-gap: 32px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    height: 4rem;
+}
+
+.ln {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 5rem 0 2rem;
+    position: relative;
+    align-items: center;
+    height: 4rem;
+}
+
+.imglink {
+    padding: 0.75rem 0 0.75rem 0.75rem;
+}
+
+.top_nav {
+    font-size: 1.25rem;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 5rem 0 2rem;
+    position: relative;
+}
+
+._mycourses {
+    padding: 2px;
+    position: relative;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    text-decoration: none;
+}
+
+._mycoursesdiv {
+    position: relative;
+}
+
+._mycourses :hover {
+    font-size: 1.25rem;
+    text-decoration: underline;
+    display: block;
+}
+
+._courses {
+    padding: 2px;
+    position: relative;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    text-decoration: none;
+}
+
+
+
+._coursesdiv {
+    position: relative;
+}
+
+._courses :hover {
+    font-size: 1.25rem;
+    text-decoration: underline;
+    display: block;
+}
+
+._revfaqs {
+    padding: 2px;
+    position: relative;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    text-decoration: none;
+    transition-delay: 0;
+}
+
+._revfaqssdiv {
+    position: relative;
+}
+
+._revfaqs :hover {
+    font-size: 1.25rem;
+    text-decoration: underline;
+    display: block;
+}
+
+.sign_log {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.25rem;
+    height: 1.75em;
+}
+
+.search {
+    display: flex;
+    height: 1.75em;
+    padding: 0.25rem;
+    font-size: 1.25rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#searchb {
+    display: flex;
+    height: 1.75em;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    transition-delay: 0.5ms;
+    background-color: rgba(240, 244, 239, 0.7);
+    border: 2px solid white;
+    border-radius: 35px;
+}
+
+::placeholder {
+    color: #0d1821;
+}
+
+#searchb:hover {
+    border: 2px solid black;
+    background-color: rgba(240, 244, 239, 0.2);
+    border-radius: 35px;
+}
+
+.sls {
+    display: flex;
+    position: relative;
+    gap: 1rem;
+}
+
+input {
+    width: 350px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+textarea {
+    border: 2px solid black;
+}
+
+._outerouter {
+    position: relative;
+}
+
+#signup {
+    text-align: center;
+    color: black;
+    background-color: rgba(180, 205, 237, 1);
+    transition-delay: 0;
+}
+
+#signup:hover {
+    background-color: rgba(180, 205, 237, 0.5);
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+#login {
+    text-align: center;
+    color: #0D1821;
+    background-color: rgb(210, 217, 238, 1);
+    transition-delay: 0;
+}
+
+#login:hover {
+    background-color: rgba(210, 225, 238, 0.5);
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+button {
+    font-size: 1.25rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px 5px;
+    border: 1px solid black;
+}
+
+main {
+    position: absolute;
+    top: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.shell {
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+}
