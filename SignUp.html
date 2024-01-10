@@ -57,7 +57,7 @@
 
         <main style="position: absolute; top:5rem; margin-left: 25%; ">
             <div>
-                <form action="">
+                <form action="./reg_get_post.php" method="post">
                     <h2
                         style="font-weight: 400; font-size: 1.75rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
                         Sign Up </h2>
@@ -69,7 +69,7 @@
                             </label><br>
                             <span>
 
-                                <input type="text" id="name" placeholder="Name"
+                                <input type="text" id="name" placeholder="Name" name="name"
                                     style="font-family: Arial, Helvetica, sans-serif;" required>
                             </span>
                         </div>
@@ -79,7 +79,7 @@
                                 style="font-size: 1.5rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Contact
                                 Number:</label><br>
                             <span>
-                                <input type="number" id="con" placeholder="Mobile Number"
+                                <input type="number" id="con" placeholder="Mobile Number" name="number"
                                     style="font-family: Arial, Helvetica, sans-serif;" required>
                             </span>
                         </div>
@@ -90,7 +90,7 @@
                                 ID: </label><br>
                             <span>
 
-                                <input type="email" id="rem" placeholder="E-Mail"
+                                <input type="email" id="rem" placeholder="E-Mail" name="email"
                                     style="font-family: Arial, Helvetica, sans-serif;" required>
                             </span>
                         </div>
@@ -100,12 +100,26 @@
                                 style="font-size: 1.5rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Password:
                             </label><br>
                             <span>
-                                <input type="password" id="me" placeholder="Enter Password"
+                                <input type="password" id="me" placeholder="Enter Password" name="password"
                                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required>
                             </span>
                         </div>
+                        <div>
+                        <!-- course add -->
+                            <label for="course"
+                                style="font-size: 1.5rem; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Course:
+                            </label><br>
+                            <span>
+                                <select name="course" id="course" id="course">
+                                    <option value="A1">A1</option>
+                                    <option value="A2">A2</option>
+                                    <option value="A3">A3</option>
+                                    <option value="A4">A4</option>
+                                </select>
+                            </span>
+                        </div>
                         <br>
-                        <input type="submit"
+                        <input type="submit" name="submit"
                             style="padding: 10px 15px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
                             value="SUBMIT">
                     </div>
