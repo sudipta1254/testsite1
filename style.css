@@ -1,6 +1,11 @@
+body {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 ._header {
     font-size: 1.75rem;
-    height: 4rem;
+    height: 4 rem;
     width: 100%;
     background-attachment: scroll;
     background-clip: border-box;
@@ -29,7 +34,7 @@
     color-scheme: light;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     top: 0%;
 }
 
@@ -87,6 +92,7 @@
     gap: 0.5rem;
     padding: 0 5rem 0 2rem;
     position: relative;
+    top: 10px;
 }
 
 ._mycourses {
@@ -204,6 +210,13 @@ textarea {
     position: relative;
 }
 
+button {
+    font-size: 1.25rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px 5px;
+    border: 1px solid black;
+}
+
 #signup {
     text-align: center;
     color: black;
@@ -230,11 +243,17 @@ textarea {
     border: 2px solid black;
 }
 
-button {
-    font-size: 1.25rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 10px 5px;
-    border: 1px solid black;
+#hell {
+    text-align: center;
+    background-color: darkgray;
+    margin: 10px;
+    transition-delay: 0;
+}
+
+#hell :hover {
+    background-color: lightgray;
+    cursor: pointer;
+    border: 2px solid black;
 }
 
 main {
@@ -252,4 +271,29 @@ a {
     position: absolute;
     right: 0px;
     bottom: 5px;
+}
+
+.main {
+    top: 4.5rem;
+    display: flex;
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    background-color: #DAFFEF;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.col-4 {
+    display: absolute;
+    position: relative;
+    border-radius: 10%;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
