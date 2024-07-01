@@ -39,7 +39,7 @@ header span {
 }
 
 .footer-main {
-  margin: 0 10rem;
+  margin: auto;
 }
 .footer-heading-top {
   display: flex;
