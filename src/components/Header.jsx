@@ -14,8 +14,8 @@ const Header = () => {
             </a>
          </div>
          <ul className="sidenav" id="slide-nav">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
+            <li><a className="wave-effect" href="#!">Sass</a></li>
+            <li><a className="wave-effect" href="#!">Components</a></li>
          </ul>
       </header>
    );
