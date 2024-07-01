@@ -15,19 +15,23 @@ main {
 
 header {
   width: 100%;
+  height: 4.2rem;
   display: flex;
   margin: 0 auto;
   padding: 0 2rem;
   align-items: center;
   justify-content: space-between;
 }
+header .app-logo-text {
+  display: flex;
+}
 header img, footer img {
   width: 4rem;
 }
 header p {
-  font-size: large;
+  font-size: 1.7rem;
   font-style: italic;
-  text-decoration: underline;
+  margin: auto 1rem;
 }
 header span {
   position: absolute;

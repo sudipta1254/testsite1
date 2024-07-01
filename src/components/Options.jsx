@@ -2,39 +2,47 @@ import React, { useEffect } from 'react';
 import M from "materialize-css";
 
 const Options = () => {
-   useEffect(() => {
-      M.AutoInit()
-    }, []);
+   useEffect(() => { M.AutoInit() }, []);
 
    return (
-      <div className="option-tab row">
-         {/* <label>Select from:</label> */}
-         {/* <div className="option-options col 12">
-            <div className="input-field row s6">
-               <input type="text" />
+      <div className="option-tab">
+         <label>Select from:</label>
+         <div className="option-options-1 row center">
+            <div class="input-field col s12 m4">
+               <select>
+                  <option value="">Airline</option>
+                  <option value="">Arrival</option>
+                  <option value="">Departure</option>
+                  <option value="">Registration</option>
+               </select>
             </div>
-            <div className="input-field row s6">
-               <input type="text" />
+            <div class="input-field col s12 m4">
+               <select>
+                  <option value="" class="left">IATA</option>
+                  <option value="" class="left">ICAO</option>
+               </select>
             </div>
-         </div> */}
-
-         <div class="input-field col s12 m6">
-            <select>
-               <option value="" disabled selected>Choose your option</option>
-               <option value="">example 1</option>
-               <option value="">example 2</option>
-               <option value="">example 3</option>
-            </select>
-            <label>Images in select</label>
+            <div class="input-field col s12 m4">
+               <select>
+                  <option value="" disabled selected>--sort--</option>
+                  <option value="" class="left">Flight </option>
+                  <option value="" class="left">Flight</option>
+               </select>
+            </div>
          </div>
-         <div class="input-field col s12 m6">
-            <select>
-               <option value="" disabled selected>Choose your option</option>
-               <option value="" class="left">example 1</option>
-               <option value="" class="left">example 2</option>
-               <option value="" class="left">example 3</option>
-            </select>
-            <label>Images in select</label>
+         <div className="option-options-2 row center">
+            <div className="input-field col s12 m4">
+               <label>
+                  <input type="checkbox" />
+                  <span>Auto update</span>
+               </label>
+            </div>
+            <div class="input-field col s12 m4">
+               <input placeholder="Enter query" id="first_name" type="text"/>
+            </div>
+            <div class="input-field col s12 m4">
+               <button class="waves-effect waves-light btn-small">Go</button>
+            </div>
          </div>
       </div>
    );
