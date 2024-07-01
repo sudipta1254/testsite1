@@ -13,7 +13,7 @@ const Footer = () => {
                   </div>
                   <p className="">You can use rows and columns here to organize your footer content.</p>
                </div>
-               <div class="col l4 offset-l2 s12">
+               <div class="col l4 offset-l2 s12 right">
                   <h5 className="">Links</h5>
                   <ul>
                      <li><a className="green-text text-darken-2" href="//sudipta1254.github.io/linkline">Sudipto</a></li>
@@ -23,9 +23,8 @@ const Footer = () => {
             </div>
          </div>
          <div className="footer-copyright">
-            <div className="container green-text text-darken-2">
+            <div className="container green-text text-darken-2 center">
                © { new Date().getFullYear() } Copyright
-               <a className="green-text text-darken-2 right" href="#!">More Links</a>
             </div>
          </div>
       </footer>
