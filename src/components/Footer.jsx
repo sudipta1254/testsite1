@@ -4,7 +4,7 @@ import icon1 from "./images/icon1.png"
 const Footer = () => {
    return (
       <footer className='page-footer blue lighten-4 green-text text-darken-2'>
-         <div className='footer-main'>
+         <div className='footer-main container'>
             <div className="row">
                <div className="col l6 s12 footer-heading">
                   <div className="footer-heading-top">
@@ -16,16 +16,16 @@ const Footer = () => {
                <div class="col l4 offset-l2 s12">
                   <h5 className="">Links</h5>
                   <ul>
-                     <li><a className="green-text text-darken-2" href="#!">Link 1</a></li>
-                     <li><a className="green-text text-darken-2" href="#!">Link 2</a></li>
+                     <li><a className="green-text text-darken-2" href="//sudipta1254.github.io/linkline">Sudipto</a></li>
+                     <li><a className="green-text text-darken-2" href="//airlabs.co">Airlabs.co</a></li>
                   </ul>
                </div>
             </div>
          </div>
          <div className="footer-copyright">
-            <div className="container green-text text-daerken-2">
-               © 2014 Copyright Text
-               <a className="green-text text-lighen-4 right" href="#!">More Links</a>
+            <div className="container green-text text-darken-2">
+               © { new Date.getFullYear() } Copyright
+               <a className="green-text text-darken-2 right" href="#!">More Links</a>
             </div>
          </div>
       </footer>
