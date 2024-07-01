@@ -14,8 +14,9 @@ const Header = () => {
             </a>
          </div>
          <ul className="sidenav" id="slide-nav">
-            <li><a className="wave-effect" href="#!">Sass</a></li>
-            <li><a className="wave-effect" href="#!">Components</a></li>
+            <li><a className="subheader" href="#!">Subheader</a></li>
+            <li><a className="waves-effect" href="#!">Realtime</a></li>
+            <li><a className="waves-effect" href="#!">Information</a></li>
          </ul>
       </header>
    );
