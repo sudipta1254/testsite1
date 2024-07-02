@@ -1,5 +1,5 @@
 import React from 'react';
-import icon1 from "../images/icon1.png"
+import icon1 from "./images/icon1.png"
 import { Navbar, NavItem, Icon } from 'react-materialize'; // Import react-materialize components
 
 const Sidenav = () => {
@@ -9,9 +9,6 @@ const Sidenav = () => {
          className="blue lighten-4 green-text text-darken-2"
          alignLinks="right"
          menuIcon={<Icon>menu</Icon>}
-         options={{
-            draggable: true,
-         }}
       >
          <NavItem href="sass.html">Sass</NavItem>
          <NavItem href="badges.html">Components</NavItem>

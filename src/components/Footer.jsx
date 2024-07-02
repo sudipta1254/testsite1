@@ -11,13 +11,14 @@ const Footer = () => {
                      <img src={icon1} alt="app icon" />
                      <h5 className="">Flights - Live flight tracking</h5>
                   </div>
-                  <p className="">You can use rows and columns here to organize your footer content.</p>
+                  <p className="details">Track live flights in your device.</p>
                </div>
-               <div class="col l4 offset-l2 s12 right">
+               <div className="col l4 offset-l2 s12">
                   <h5 className="">Links</h5>
-                  <ul>
-                     <li><a className="green-text text-darken-2" href="//sudipta1254.github.io/linkline">Sudipto</a></li>
-                     <li><a className="green-text text-darken-2" href="//airlabs.co">Airlabs.co</a></li>
+                  <ul className="">
+                     <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//sudipta1254.github.io/linkline">Sudipto</a></li>
+                     <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//airlabs.co">Airlabs.co</a></li>
+                     <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//github.com/sudipta1254/flights">Project on GitHub</a></li>
                   </ul>
                </div>
             </div>

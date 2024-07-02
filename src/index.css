@@ -2,10 +2,11 @@ body {
   /* display: flex;
   min-height: 100vh;
   flex-direction: column; */
-  background: #e1e2e4;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: #f4f4f4;
+  font-family: "Arsenal SC", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+  /* font-family: "Open Sans", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,6 +23,7 @@ header {
   padding: 0 2rem;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 -10px red;
 }
 header .app-logo-text {
   display: flex;
@@ -29,8 +31,8 @@ header .app-logo-text {
 header img, footer img {
   width: 4rem;
 }
-header p {
-  font-size: 1.7rem;
+.app-logo-text p {
+  font-size: 2rem;
   font-style: italic;
   margin: auto 1rem;
 }
@@ -39,6 +41,27 @@ header span {
   right: 20px;
 }
 
+.options {
+  margin: 1rem 0 0;
+}
+.options .select-wrapper  { /* Dropdown */
+  width: 8rem;
+}
+.option-options-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.option-options-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+footer {
+  font-size: large;
+}
 .footer-main {
   margin: auto;
 }
@@ -46,7 +69,12 @@ header span {
   display: flex;
 }
 .footer-heading-top h5 {
+  font-size: 2rem;
   margin: 1rem;
+}
+.footer-heading p {
+  font-size: 2rem;
+  margin: 0 0  1rem;
 }
 
 
