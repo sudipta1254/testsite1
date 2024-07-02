@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import M from "materialize-css";
 
 const Options = () => {
-   /* const [selectVal1, setSelectVal1] = useState("airline")
-   const [selectVal2, setSelectVal2] = useState("_iata")
    const [selectVal3, setSelectVal3] = useState("")
-   value={selectVal3} onChange={e => setSelectVal3(e.target.value)} */
 
    useEffect(() => { M.AutoInit() }, []);
 
@@ -28,7 +25,7 @@ const Options = () => {
                </select>
             </div>
             <div className="">
-               <select>
+               <select value={selectVal3} onChange={e => setSelectVal3(e.target.value)}>
                   <option value="" disabled>--sort--</option>
                   <option value='flight_number_a'>Flight ↑</option>
                   <option value='flight_number_d'>Flight ↓</option>
