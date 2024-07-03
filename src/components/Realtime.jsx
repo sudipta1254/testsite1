@@ -1,10 +1,14 @@
 import React from 'react'
-import Header from './Header';
+import { useParams } from 'react-router-dom';
+
 
 const Realtime = () => {
+   const { id } = useParams();
+   id && console.log(id)
+
    return (
       <div className="Realtime center">
-         <h1>Realtime</h1>
+         <h1>Realtime - { id }</h1>
       </div>
    );
 }

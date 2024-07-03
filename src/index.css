@@ -27,11 +27,13 @@ header {
 }
 header .app-logo-text {
   display: flex;
+  align-items: center;
 }
 header img, footer img {
   width: 4rem;
 }
-.app-logo-text p {
+.app-logo-text a {
+  color: #388E3C !important;
   font-size: 2rem;
   font-style: italic;
   margin: auto 1rem;

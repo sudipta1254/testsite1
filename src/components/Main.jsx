@@ -20,6 +20,14 @@ const Main = () => {
                      <OptionsInformation />
                      <Information />
                   </Route>
+                  <Route exact path="/:id">
+                     <OptionsRealtime />
+                     <Realtime />
+                  </Route>
+                  <Route exact path="/info/:id">
+                     <OptionsInformation />
+                     <Information />
+                  </Route>
                   <Route path="*">
                      <NotFound />
                   </Route>
