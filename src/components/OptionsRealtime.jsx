@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import M from "materialize-css";
+import React, { useState } from 'react';
 
 const OptionsRealtime = () => {
    const [selectVal3, setSelectVal3] = useState("")
-
-   useEffect(() => { M.AutoInit() }, []);
 
    return (
       <div className="optionsRealtime option-tab options">

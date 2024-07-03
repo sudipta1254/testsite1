@@ -2,10 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './components/App';
 import "./index.css";
-import 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/dist/js/materialize.min.js';
+import $ from "jquery"
 
-const root = document.getElementById('root')
+const root = $('#root')[0]
 createRoot(root).render(
   <React.StrictMode>
     <App />

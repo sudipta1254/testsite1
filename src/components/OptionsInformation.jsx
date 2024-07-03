@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react';
-import M from "materialize-css";
+import React from 'react';
 
 const OptionsInformation = () => {
-   useEffect(() => { M.AutoInit() }, []);
-
    return (
       <div className="optionsInformation option-tab options">
          <label>Select from:</label>
