@@ -1,6 +1,6 @@
 import React from 'react'
 import icon1 from "./assets/icon1.png"
-import { Link, BrowserRouter as Router } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const flex = {display:"flex",alignItems:"center",justifyContent:"space-between"};
 
@@ -18,7 +18,7 @@ const Header = () => {
                </a>
             </div>
             <ul className="sidenav" id="slide-nav">
-               <li><Link className="subheader" to="#!">Main options</Link></li>
+               <li><a className="subheader" href="#!">Main options</a></li>
                <li><Link className="" to="/">Realtime</Link></li>
                <li><Link className="" to="/info">Information</Link></li>
             </ul>
