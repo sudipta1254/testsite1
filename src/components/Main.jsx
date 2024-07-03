@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import OptionsRealtime from './OptionsRealtime';
 import OptionsInformation from './OptionsInformation';
 import NotFound from './NotFound';
@@ -10,47 +10,45 @@ const Main = () => {
   return (
     <div className="Main">
       <div className='container'>
-        <Router>
-          <Routes>
+         <Routes>
             <Route
-              exact path="/"
-              element={
-                <>
+            exact path="/"
+            element={
+               <>
                   <OptionsRealtime />
                   <Realtime />
-                </>
-              }
+               </>
+            }
             />
             <Route
-              exact path="/info"
-              element={
-                <>
+            exact path="/info"
+            element={
+               <>
                   <OptionsInformation />
                   <Information />
-                </>
-              }
+               </>
+            }
             />
             <Route
-              exact path="/:id"
-              element={
-                <>
+            exact path="/:id"
+            element={
+               <>
                   <OptionsRealtime />
                   <Realtime />
-                </>
-              }
+               </>
+            }
             />
             <Route
-              exact path="/info/:id"
-              element={
-                <>
+            exact path="/info/:id"
+            element={
+               <>
                   <OptionsInformation />
                   <Information />
-                </>
-              }
+               </>
+            }
             />
             <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Router>
+         </Routes>
       </div>
     </div>
   );

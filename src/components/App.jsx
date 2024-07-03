@@ -2,14 +2,15 @@ import React from 'react';
 import Main from './Main';
 import Footer from './Footer';
 import Header from './Header';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </Router>
   );
 }
 
