@@ -1,41 +1,59 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import OptionsRealtime from './OptionsRealtime';
-import OptionsInformation from "./OptionsInformation"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import OptionsInformation from './OptionsInformation';
 import NotFound from './NotFound';
-import Realtime from "./Realtime";
-import Information from "./Information";
+import Realtime from './Realtime';
+import Information from './Information';
 
 const Main = () => {
-   return (
-      <div className="Main">
-         <div className='container'>
-            <Router>
-               <Switch>
-                  <Route exact path="/">
-                     <OptionsRealtime />
-                     <Realtime />
-                  </Route>
-                  <Route exact path="/info">
-                     <OptionsInformation />
-                     <Information />
-                  </Route>
-                  <Route exact path="/:id">
-                     <OptionsRealtime />
-                     <Realtime />
-                  </Route>
-                  <Route exact path="/info/:id">
-                     <OptionsInformation />
-                     <Information />
-                  </Route>
-                  <Route path="*">
-                     <NotFound />
-                  </Route>
-               </Switch>
-            </Router>
-         </div>
+  return (
+    <div className="Main">
+      <div className='container'>
+        <Router>
+          <Routes>
+            <Route
+              exact path="/"
+              element={
+                <>
+                  <OptionsRealtime />
+                  <Realtime />
+                </>
+              }
+            />
+            <Route
+              exact path="/info"
+              element={
+                <>
+                  <OptionsInformation />
+                  <Information />
+                </>
+              }
+            />
+            <Route
+              exact path="/:id"
+              element={
+                <>
+                  <OptionsRealtime />
+                  <Realtime />
+                </>
+              }
+            />
+            <Route
+              exact path="/info/:id"
+              element={
+                <>
+                  <OptionsInformation />
+                  <Information />
+                </>
+              }
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Router>
       </div>
-   );
-}
+    </div>
+  );
+};
 
 export default Main;
