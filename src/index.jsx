@@ -6,7 +6,7 @@ import $ from "jquery";
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
 
-const root = document.getElementById('root')
+const root = $('#root')[0]
 createRoot(root).render(
   <React.StrictMode>
     <App />

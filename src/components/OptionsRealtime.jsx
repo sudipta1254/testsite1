@@ -3,7 +3,7 @@ import M from "materialize-css";
 
 const OptionsRealtime = () => {
    const [selectVal3, setSelectVal3] = useState("")
-
+   
    useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
    
    return (
