@@ -1,13 +1,33 @@
 import React from 'react';
-import Options from './Options';
+import OptionsRealtime from './OptionsRealtime';
+import OptionsInformation from "./OptionsInformation"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NotFound from './NotFound';
+import Realtime from "./Realtime";
+import Information from "./Information";
 
 const Main = () => {
    return (
-      <div className='container'>
-         <Options />
-         <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, asperiores enim autem eos consequatur aliquam?</h1>
+      <div className="Main">
+         <div className='container'>
+            <Router>
+               <Switch>
+                  <Route exact path="/">
+                     <OptionsRealtime />
+                     <Realtime />
+                  </Route>
+                  <Route exact path="/info">
+                     <OptionsInformation />
+                     <Information />
+                  </Route>
+                  <Route path="*">
+                     <NotFound />
+                  </Route>
+               </Switch>
+            </Router>
+         </div>
       </div>
    );
 }
- 
+
 export default Main;

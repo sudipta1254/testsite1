@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from './Footer';
 import Main from './Main';
+import Footer from './Footer';
 import Header from './Header';
 
 const App = () => {

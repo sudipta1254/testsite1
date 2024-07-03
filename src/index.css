@@ -57,6 +57,12 @@ header span {
   align-items: center;
   justify-content: space-around;
 }
+.option-options-2 #first_name {
+  width: 9rem;
+}
+.option-options-2 button {
+  width: 4.5rem;
+}
 
 
 footer {
@@ -67,6 +73,7 @@ footer {
 }
 .footer-heading-top {
   display: flex;
+  align-items: center;
 }
 .footer-heading-top h5 {
   font-size: 2rem;

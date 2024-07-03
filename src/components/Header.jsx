@@ -1,5 +1,5 @@
 import React from 'react'
-import icon1 from "./images/icon1.png"
+import icon1 from "./assets/icon1.png"
 
 const flex = {display:"flex",alignItems:"center",justifyContent:"space-between"};
 
@@ -17,8 +17,8 @@ const Header = () => {
          </div>
          <ul className="sidenav" id="slide-nav">
             <li><a className="subheader" href="#!">Main options</a></li>
-            <li><a className="" href="#!">Realtime</a></li>
-            <li><a className="" href="#!">Information</a></li>
+            <li><a className="" href="/">Realtime</a></li>
+            <li><a className="" href="/info">Information</a></li>
          </ul>
       </header>
    );

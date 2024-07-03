@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import M from "materialize-css";
 
-const Options = () => {
+const OptionsRealtime = () => {
    const [selectVal3, setSelectVal3] = useState("")
 
    useEffect(() => { M.AutoInit() }, []);
 
    return (
-      <div className="options option-tab">
+      <div className="optionsRealtime option-tab options">
          <label>Select from:</label>
          <div className="option-options-1 ">
             <div className="">
@@ -54,4 +54,4 @@ const Options = () => {
    );
 }
  
-export default Options;
+export default OptionsRealtime;
