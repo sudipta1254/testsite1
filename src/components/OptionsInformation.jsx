@@ -23,7 +23,7 @@ const OptionsInformation = () => {
                </label>
             </div>
             <div className="input-field">
-               <input placeholder="Enter query" id="first_name" type="text"/>
+               <input placeholder="Enter query" id="first_name" type="search"/>
             </div>
             <div className="input-field">
                <button className="btn-small teal lighten-1">Go</button>

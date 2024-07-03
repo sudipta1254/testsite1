@@ -10,7 +10,7 @@ const Header = () => {
          <header className='header blue lighten-4 green-text text-darken-2' style={flex}>
             <div className="app-logo-text">
                <img src={icon1} alt="app logo" />
-               <p><Link to="/">Flights</Link></p>
+               <p><a href="/">Flights</a></p>
             </div>
             <div>
                <a href='#!' data-target="slide-nav" className="sidenav-trigger">
@@ -19,9 +19,8 @@ const Header = () => {
             </div>
             <ul className="sidenav" id="slide-nav">
                <li><a className="subheader" href="#!">Main options</a></li>
-               <li><Link className="" to="/">Home</Link></li>
-               <li><Link className="" to="/">Realtime</Link></li>
-               <li><Link className="" to="/info">Information</Link></li>
+               <li><a className="" href="/">Realtime</a></li>
+               <li><a className="" href="/info">Information</a></li>
             </ul>
          </header>
       </Router>
