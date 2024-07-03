@@ -11,8 +11,7 @@ const Main = () => {
     <div className="Main">
       <div className='container'>
          <Routes>
-            <Route
-            exact path="/"
+            <Route exact path="/"
             element={
                <>
                   <OptionsRealtime />
@@ -20,8 +19,7 @@ const Main = () => {
                </>
             }
             />
-            <Route
-            exact path="/info"
+            <Route exact path="/info"
             element={
                <>
                   <OptionsInformation />
@@ -29,8 +27,7 @@ const Main = () => {
                </>
             }
             />
-            <Route
-            exact path="/:id"
+            <Route exact path="/:id"
             element={
                <>
                   <OptionsRealtime />
@@ -38,8 +35,7 @@ const Main = () => {
                </>
             }
             />
-            <Route
-            exact path="/info/:id"
+            <Route exact path="/info/:id"
             element={
                <>
                   <OptionsInformation />

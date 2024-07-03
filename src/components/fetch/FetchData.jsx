@@ -6,22 +6,36 @@ const FetchData = (url) => {
    const [error, setError] = useState(null);
 
    useEffect(() => {
+      const abortCont = new AbortController();
+
       const fetchData = async () => {
          try {
-            const response = await fetch(url);
+            const response = await fetch(url, { signal: abortCont.signal });
             if (!response.ok) {
                throw new Error('Network response was not ok');
             }
             const result = await response.json();
+            if (result.error) {
+               throw new Error(result.error.message);
+            }
             setData(result);
-         } catch (error) {
-            setError(error);
-         } finally {
-            setLoading(false);
+            setLoading(false)
+            setError(null)
+         } catch (err) {
+            if (err.name === 'AbortError') {
+               console.log('fetch aborted')
+            } else {
+               // auto catches network / connection error
+               setLoading(false);
+               setError(err.message);
+            }
          }
       };
 
       fetchData();
+
+      // abort the fetch
+      return () => abortCont.abort();
    }, [url]);
 
    return { data, loading, error };

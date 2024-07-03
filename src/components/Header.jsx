@@ -1,5 +1,5 @@
 import React from 'react'
-import icon1 from "./assets/icon1.png"
+import icon1 from "../assets/icon1.png"
 import { Link } from "react-router-dom"
 
 const flex = {display:"flex",alignItems:"center",justifyContent:"space-between"};
