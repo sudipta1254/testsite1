@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Main from './Main';
 import Footer from './Footer';
 import Header from './Header';
-import M from "materialize-css";
 import { BrowserRouter as Router } from 'react-router-dom';
 
 const App = () => {
