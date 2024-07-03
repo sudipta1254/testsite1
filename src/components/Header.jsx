@@ -1,5 +1,6 @@
 import React from 'react'
 import icon1 from "./assets/icon1.png"
+import { Link } from "react-router-dom"
 
 const flex = {display:"flex",alignItems:"center",justifyContent:"space-between"};
 
@@ -17,8 +18,8 @@ const Header = () => {
          </div>
          <ul className="sidenav" id="slide-nav">
             <li><a className="subheader" href="#!">Main options</a></li>
-            <li><a className="" href="/">Realtime</a></li>
-            <li><a className="" href="/info">Information</a></li>
+            <li><Link className="" to="/">Realtime</Link></li>
+            <li><Link className="" to="/info">Information</Link></li>
          </ul>
       </header>
    );
