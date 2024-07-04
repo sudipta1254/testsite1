@@ -26,6 +26,7 @@ const FetchData = (url) => {
                console.log('fetch aborted')
             } else {
                // auto catches network / connection error
+               setData(null);
                setLoading(false);
                setError(err.message);
             }

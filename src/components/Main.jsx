@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import OptionsRealtime from './OptionsRealtime';
-import OptionsInformation from './OptionsInformation';
+import OptionsRealtime from './options/OptionsRealtime';
+import OptionsInformation from './options/OptionsInformation';
 import NotFound from './NotFound';
 import Realtime from './Realtime';
 import Information from './Information';
