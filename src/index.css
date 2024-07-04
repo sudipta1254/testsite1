@@ -66,6 +66,27 @@ header span {
   width: 4.5rem;
 }
 
+#data {
+  width: 85%;
+  height: 67vh;
+  max-width: 40rem;
+  margin: 10px auto;
+  color: white;
+  overflow: auto;
+  line-height: 2;
+  white-space: nowrap;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent;
+  /* border: 1px solid; */
+  padding: 0 0 0 20px;
+  border-radius: 10px;
+  /* background: #31373C */
+  background-image: linear-gradient(
+     to bottom right,
+     #403f44, #1e1b32
+  );
+}
+
 
 footer {
   font-size: large;
