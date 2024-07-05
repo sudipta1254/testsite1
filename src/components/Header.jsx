@@ -8,7 +8,7 @@ const flex = {display:"flex",alignItems:"center",justifyContent:"space-between"}
 
 const Header = () => {
    $(function() {
-      $('.navlink-realtime, .navlink-information').on('click', e => {
+      $('.navlink-realtime, .navlink-information, .navlink-chart').on('click', e => {
          M.Sidenav.getInstance($('.sidenav')).close()
       })
    })

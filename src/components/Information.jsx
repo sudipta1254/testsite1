@@ -13,7 +13,7 @@ const Information = () => {
    let { error, loading, data } = FetchData(`https://airlabs.co/api/v9/flight?api_key=${key}&flight_iata=${id}`)
 
    return (
-      <div className="Information center">
+      <div className="Information">
          {/* <h1>Information - { id }</h1> */}
          { error && <div>{ error }</div> }
          { loading && <div>Loading...</div> }

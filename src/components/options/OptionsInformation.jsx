@@ -17,14 +17,14 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
                   <option value="_icao" className="left">Flight ICAO</option>
                </select>
             </div>
-         </div>
-         <div className="option-options-2">
             <div className="">
                <label>
                   <input type="checkbox" />
                   <span>Auto update</span>
                </label>
             </div>
+         </div>
+         <div className="option-options-2">
             <div className="input-field">
                <input placeholder="Enter query" id="inpInformation" type="text"  onChange={e => setInpInformation(e.target.value)}/>
             </div>
