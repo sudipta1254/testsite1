@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import M from "materialize-css";
+import { useNavigate } from 'react-router-dom';
 
-const OptionsInformation = () => {
+const OptionsInformation = ({ inpInformation, setInpInformation }) => {
+   const navigate = useNavigate()
+   
    useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
    
    return (
@@ -23,14 +26,14 @@ const OptionsInformation = () => {
                </label>
             </div>
             <div className="input-field">
-               <input placeholder="Enter query" id="first_name" type="search"/>
+               <input placeholder="Enter query" id="inpInformation" type="text"  onChange={e => setInpInformation(e.target.value)}/>
             </div>
             <div className="input-field">
-               <button className="btn-small teal lighten-1">Go</button>
+               <button className="btn-small teal lighten-1"  onClick={e => navigate('/info/' + inpInformation)}>Go</button>
             </div>
          </div>
       </div>
    );
 }
- 
+
 export default OptionsInformation;

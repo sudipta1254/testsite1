@@ -14,7 +14,7 @@ const Information = () => {
 
    return (
       <div className="Information center">
-         <h1>Information - { id }</h1>
+         {/* <h1>Information - { id }</h1> */}
          { error && <div>{ error }</div> }
          { loading && <div>Loading...</div> }
          { data && <DataInformation data={data} /> }

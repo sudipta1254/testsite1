@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import M from "materialize-css";
+import { useNavigate } from 'react-router-dom';
 
-const OptionsRealtime = () => {
+const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
+   const navigate = useNavigate()
    const [selectVal3, setSelectVal3] = useState("")
    
    useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
@@ -44,10 +46,10 @@ const OptionsRealtime = () => {
                </label>
             </div>
             <div className="input-field">
-               <input placeholder="Enter query" id="first_name" type="search"/>
+               <input placeholder="Enter query" id="inpRealtime" type="text" onChange={e => setInpRealtime(e.target.value)} />
             </div>
             <div className="input-field">
-               <button className="btn-small teal lighten-1">Go</button>
+               <button className="btn-small teal lighten-1" onClick={e => navigate('/' + inpRealtime)}>Go</button>
             </div>
          </div>
       </div>
