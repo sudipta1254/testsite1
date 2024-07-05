@@ -99,6 +99,9 @@ header span {
   width: 25px;
   background: white;
 }
+hr {
+  width: 80%;
+}
 
 
 footer {

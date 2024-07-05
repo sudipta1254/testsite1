@@ -17,7 +17,7 @@ const Realtime = ({ inpRealtime }) => {
          {/* <h1>Realtime - { id }</h1> */}
          { error && <div>{ error }</div> }
          { loading && <div>Loading...</div> }
-         { data && <DataRealtime data={data} id={id} /> }
+         { data && <DataRealtime data={data} /> }
       </div>
    );
 }
