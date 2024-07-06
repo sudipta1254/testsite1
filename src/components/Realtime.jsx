@@ -1,20 +1,22 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import FetchData from "./fetch/FetchData"
 import DataRealtime from "./processData/DataRealtime"
+import { SortFlight } from './helper/Helper';
 
-const Realtime = ({ inpRealtime }) => {
+const Realtime = () => {
    const { id } = useParams();
-   id && console.log(3, id)
+   const [searchParams] = useSearchParams()
+   console.log(searchParams.get("sort"))
 
-   let key = "";
-   key = id ? "5dbaf919-6297-43d4-bf12-b155f0a70d55" : key
+   let key = id ? process.env.REACT_APP_KEY : ""
 
    let { error, loading, data } = FetchData(`https://airlabs.co/api/v9/flights?api_key=${key}&airline_iata=${id}`)
 
+   SortFlight(searchParams.get("sort"), data?.response)
+
    return (
       <div className="Realtime">
-         {/* <h1>Realtime - { id }</h1> */}
          { error && <div>{ error }</div> }
          { loading && <div>Loading...</div> }
          { data && <DataRealtime data={data} /> }

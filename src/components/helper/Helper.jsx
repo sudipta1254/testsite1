@@ -6,7 +6,7 @@ export const CountryName = (code) => {
 }
 
 export const CountryFlag = (flag) => {
-   <img alt="Country flag" src={`https://flagcdn.com/24x18/${flag.toLowerCase()}.png`} />
+   return <img alt="Country flag" src={`https://flagcdn.com/24x18/${flag.toLowerCase()}.png`} />
 }
 
 export const AirlineFlag = (logo) => {
@@ -30,4 +30,16 @@ export const Interval = (t) => {
    if(min)
       str += min+' min(s)';
    return str;
+}
+
+export const SortFlight = (term, data) => {
+   if(term)
+      if(term.includes('_a'))
+         data.sort(function(a, b) {
+            return a[term.slice(0,-2)] - b[term.slice(0,-2)];
+         });
+      else
+         data.sort(function(a, b) {
+            return b[term.slice(0,-2)] - a[term.slice(0,-2)];
+         });
 }

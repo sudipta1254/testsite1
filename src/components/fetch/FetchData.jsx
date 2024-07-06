@@ -32,7 +32,6 @@ const FetchData = (url) => {
             }
          }
       };
-
       fetchData();
 
       // abort the fetch

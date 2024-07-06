@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import M from "materialize-css";
 import { useNavigate } from 'react-router-dom';
+import M from "materialize-css";
 
 const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
    const navigate = useNavigate()
+   // const [selectVal1, setSelectVal1] = useState("")
+   // const [selectVal2, setSelectVal2] = useState("")
    const [selectVal3, setSelectVal3] = useState("")
+   const [ab, setAb] = useState("flight_number_a")
    
    useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
    
@@ -27,14 +30,13 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
                </select>
             </div>
             <div className="">
-               <select value={selectVal3} onChange={e => setSelectVal3(e.target.value)}>
+               <select value={selectVal3} onChange={e => {console.log(e.target.value)
+                                             setSelectVal3(e.target.value)
+                                             navigate(`/${inpRealtime}?sort=${ab}`)
+                                          }}>
                   <option value="" disabled>--sort--</option>
                   <option value='flight_number_a'>Flight ↑</option>
                   <option value='flight_number_d'>Flight ↓</option>
-                  <option value='alt_a'>Altitude ↑</option>
-                  <option value='alt_d'>Altitude ↓</option>
-                  <option value='speed_a'>Speed ↑</option>
-                  <option value='speed_d'>Speed ↓</option>
                </select>
             </div>
          </div>
@@ -46,7 +48,7 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
                </label>
             </div>
             <div className="input-field">
-               <input placeholder="Enter query" id="inpRealtime" type="text" onChange={e => setInpRealtime(e.target.value)} />
+               <input placeholder="Enter query" id="inpRealtime" type="text" onChange={e => setInpRealtime(e.target.value?.toUpperCase())} />
             </div>
             <div className="input-field">
                <button className="btn-small teal lighten-1" onClick={e => navigate('/' + inpRealtime)}>Go</button>

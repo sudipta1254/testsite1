@@ -19,7 +19,7 @@ const Main = () => {
                element={
                   <>
                      <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
-                     <Realtime inpRealtime={inpRealtime} />
+                     <Realtime />
                   </>
                }
                />
@@ -27,7 +27,7 @@ const Main = () => {
                element={
                   <>
                      <OptionsInformation inpInformation={inpInformation} setInpInformation={setInpInformation} />
-                     <Information inpInformation={inpInformation} />
+                     <Information />
                   </>
                }
                />
@@ -40,7 +40,7 @@ const Main = () => {
                element={
                   <>
                      <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
-                     <Realtime inpRealtime={inpRealtime} />
+                     <Realtime />
                   </>
                }
                />
@@ -48,7 +48,7 @@ const Main = () => {
                element={
                   <>
                      <OptionsInformation inpInformation={inpInformation} setInpInformation={setInpInformation} />
-                     <Information inpInformation={inpInformation} />
+                     <Information />
                   </>
                }
                />

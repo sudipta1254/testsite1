@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import M from "materialize-css";
 import { useNavigate } from 'react-router-dom';
+import M from "materialize-css";
 
 const OptionsInformation = ({ inpInformation, setInpInformation }) => {
    const navigate = useNavigate()
@@ -26,10 +26,10 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
          </div>
          <div className="option-options-2">
             <div className="input-field">
-               <input placeholder="Enter query" id="inpInformation" type="text"  onChange={e => setInpInformation(e.target.value)}/>
+               <input placeholder="Enter query" id="inpInformation" type="text"  onChange={e => setInpInformation(e.target.value?.toUpperCase())}/>
             </div>
             <div className="input-field">
-               <button className="btn-small teal lighten-1"  onClick={e => navigate('/info/' + inpInformation)}>Go</button>
+               <button className="btn-small teal lighten-1"  onClick={e => navigate('/INFO/' + inpInformation)}>Go</button>
             </div>
          </div>
       </div>
