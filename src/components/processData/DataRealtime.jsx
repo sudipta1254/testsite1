@@ -1,14 +1,8 @@
 import React from 'react'
-import { useSearchParams } from 'react-router-dom';
-import { SortFlight } from '../helper/Helper';
 import { CountryName, CountryFlag, AirlineFlag, UTCtoIST } from "../helper/Helper"
 
 const DataRealtime = ({ data }) => {
    const dts = data.response;
-
-   const [searchParams] = useSearchParams()
-   console.log('sort', searchParams.get("sort"))
-   SortFlight(searchParams.get("sort"), data?.response)
    
    return (
       <div className="DataRealtime">
