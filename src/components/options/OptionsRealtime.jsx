@@ -30,9 +30,11 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
                </select>
             </div>
             <div className="">
-               <select value={selectVal3} onChange={e => {console.log(e.target.value)
+               <select value={selectVal3} onChange={e => {
+                                             console.log('sort', e.target.value)
                                              setSelectVal3(e.target.value)
-                                             navigate(`/${inpRealtime}?sort=${ab}`)
+                                             setAb(e.target.value)
+                                             navigate(`/${inpRealtime}?sort=${e.target.value}`)
                                           }}>
                   <option value="" disabled>--sort--</option>
                   <option value='flight_number_a'>Flight ↑</option>
@@ -51,7 +53,7 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
                <input placeholder="Enter query" id="inpRealtime" type="text" onChange={e => setInpRealtime(e.target.value?.toUpperCase())} />
             </div>
             <div className="input-field">
-               <button className="btn-small teal lighten-1" onClick={e => navigate('/' + inpRealtime)}>Go</button>
+               <button className="btn-small teal lighten-1" onClick={e => navigate('/'+inpRealtime)}>Go</button>
             </div>
          </div>
       </div>

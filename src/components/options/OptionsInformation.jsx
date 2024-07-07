@@ -29,7 +29,7 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
                <input placeholder="Enter query" id="inpInformation" type="text"  onChange={e => setInpInformation(e.target.value?.toUpperCase())}/>
             </div>
             <div className="input-field">
-               <button className="btn-small teal lighten-1"  onClick={e => navigate('/INFO/' + inpInformation)}>Go</button>
+               <button className="btn-small teal lighten-1"  onClick={e => navigate('/info/' + inpInformation)}>Go</button>
             </div>
          </div>
       </div>

@@ -33,13 +33,14 @@ export const Interval = (t) => {
 }
 
 export const SortFlight = (term, data) => {
+   console.log('helper',term, data)
    if(term)
-      if(term.includes('_a'))
-         data.sort(function(a, b) {
-            return a[term.slice(0,-2)] - b[term.slice(0,-2)];
+      if(term?.includes('_a'))
+         data?.sort(function(a, b) {
+            return a[term?.slice(0,-2)] - b[term?.slice(0,-2)];
          });
       else
-         data.sort(function(a, b) {
-            return b[term.slice(0,-2)] - a[term.slice(0,-2)];
+         data?.sort(function(a, b) {
+            return b[term?.slice(0,-2)] - a[term?.slice(0,-2)];
          });
 }

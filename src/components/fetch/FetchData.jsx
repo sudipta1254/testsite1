@@ -9,6 +9,7 @@ const FetchData = (url) => {
       const abortCont = new AbortController();
 
       const fetchData = async () => {
+         console.log("Fetching..")
          try {
             const response = await fetch(url, { signal: abortCont.signal });
             if (!response.ok) {
