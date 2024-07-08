@@ -8,11 +8,14 @@ const Realtime = () => {
    const { id } = useParams();
    const [searchParams] = useSearchParams()
 
-   let key = id ? process.env.REACT_APP_KEY : ""
+   const KEY = id ? process.env.REACT_APP_KEY1 : "";
+   const type = searchParams.get("type");
+   const code = searchParams.get("code");
+   const sort = searchParams.get("sort");
 
-   let { error, loading, data } = FetchData(`https://airlabs.co/api/v9/flights?api_key=${key}&airline_iata=${id}`)
+   let { error, loading, data } = FetchData(`https://airlabs.co/api/v9/flights?api_key=${KEY}&${type}${code}=${id}`)
 
-   if (searchParams.get("flight_number_a") || searchParams.get("flight_number_d")) SortFlight(searchParams.get("sort"), data?.response)
+   if (sort) SortFlight(sort, data?.response)
 
    return (
       <div className="Realtime">

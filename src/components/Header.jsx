@@ -25,7 +25,7 @@ const Header = () => {
             </a>
          </div>
          <ul className="sidenav" id="slide-nav">
-            <li><a className="subheader" href="#!">Main options</a></li>
+            <li><a className="subheader" href="#!">More options</a></li>
             <li><Link className="navlink-realtime" to="/">Realtime</Link></li>
             <li><Link className="navlink-information" to="/info">Information</Link></li>
             <li><Link className="navlink-chart" to="/chart/bbi">Weather info</Link></li>

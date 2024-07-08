@@ -2,15 +2,16 @@ import React from 'react'
 import { Country } from '../../assets/env'
 
 export const CountryName = (code) => {
-   return code === "UK" ? code : Country[code]
+   return Country[code]
 }
 
 export const CountryFlag = (flag) => {
-   return <img alt="Country flag" src={`https://flagcdn.com/24x18/${flag.toLowerCase()}.png`} />
+   flag = flag === "UK" ? "gb" : flag;
+   return <img alt="(Country flag)" src={`https://flagcdn.com/24x18/${flag?.toLowerCase()}.png`} />
 }
 
 export const AirlineFlag = (logo) => {
-   return <div id="logo-div"><img alt="Airline flag" src={`https://airlabs.co/img/airline/m/${logo}.png`} id='logo' /></div>
+   return <div id="logo-div"><img alt="(Airline flag)" src={`https://airlabs.co/img/airline/m/${logo}.png`} id='logo' /></div>
 }
 
 export const UTCtoIST = (t) => {

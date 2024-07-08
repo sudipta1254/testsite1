@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import M from "materialize-css";
 
 const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
+   const URLParams = {};
    const navigate = useNavigate()
    const [path, setPath] = useState("")
-   const [searchParams, setSearchParams] = useSearchParams()
    const [selectVal1, setSelectVal1] = useState("airline")
    const [selectVal2, setSelectVal2] = useState("_iata")
    const [selectVal3, setSelectVal3] = useState("")
@@ -13,12 +13,12 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
    useEffect(() => {
       setPath("/"+inpRealtime)
    }, [inpRealtime])
-   const cal = () => {
-      const params = {};
-      if (selectVal1) params.opt1 = selectVal1;
-      if (selectVal2) params.opt2 = selectVal2;
-      if (selectVal3) params.sorted = selectVal3;
-      setSearchParams(params);
+   const setParams = () => {
+      if (selectVal1) URLParams.type = selectVal1;
+      if (selectVal2) URLParams.code = selectVal2;
+      if (selectVal3) URLParams.sort = selectVal3;
+      
+      return new URLSearchParams(URLParams).toString();
    }
    
    useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
@@ -42,8 +42,9 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
             </div>
             <div className="">
                <select value={selectVal3} onChange={e => {
-                                                      setSelectVal3(e.target.value)
-                                                      setSearchParams({ sort: e.target.value })
+                                                      setSelectVal3(e.target.value);
+                                                      URLParams.sort = e.target.value;
+                                                      navigate(`${path}?${setParams()}`)
                                                    }}>
                   <option value="" disabled>--sort--</option>
                   <option value='flight_number_a'>Flight ↑</option>
@@ -62,10 +63,7 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
                <input placeholder="Enter query" id="inpRealtime" type="text" onChange={e => setInpRealtime(e.target.value?.toUpperCase())} />
             </div>
             <div className="input-field">
-               <button className="btn-small teal lighten-1" onClick={e =>  {
-                                                               navigate(path)
-                                                               // cal()
-                                                            }}>Go</button>
+               <button className="btn-small teal lighten-1" onClick={e => navigate(`${path}?${setParams()}`)}>Go</button>
             </div>
          </div>
       </div>

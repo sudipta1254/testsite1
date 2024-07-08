@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
 import OptionsRealtime from './options/OptionsRealtime';
 import OptionsInformation from './options/OptionsInformation';
 import NotFound from './NotFound';
-import Realtime from './Realtime';
+import Realtime from "./Realtime"
 import Information from './Information';
 import Chart from "./helper/Chart"
 
@@ -19,7 +20,7 @@ const Main = () => {
                element={
                   <>
                      <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
-                     <Realtime />
+                     <Home option="realtime" />
                   </>
                }
                />
@@ -27,7 +28,7 @@ const Main = () => {
                element={
                   <>
                      <OptionsInformation inpInformation={inpInformation} setInpInformation={setInpInformation} />
-                     <Information />
+                     <Home option="information" />
                   </>
                }
                />
