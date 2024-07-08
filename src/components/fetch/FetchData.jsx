@@ -10,6 +10,7 @@ const FetchData = (url, KEY) => {
 
       const fetchData = async () => {
          console.log("Fetching..")
+         console.log(url)
          try {
             const response = await fetch(url, { signal: abortCont.signal });
             if (!response.ok) {
