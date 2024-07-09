@@ -50,6 +50,7 @@ export const SortFlight = (term, data) => {
 export const handleEnter = (e) => {
    if (e.key === 'Enter') {
       e.preventDefault();
+      e.target.blur();
       $("button").trigger("click");
    }
 }
