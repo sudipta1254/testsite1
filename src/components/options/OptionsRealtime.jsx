@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import M from "materialize-css";
+import { handleEnter } from '../helper/Helper';
 
 const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
    const URLParams = {};
    const navigate = useNavigate()
    const [path, setPath] = useState("")
+   const { id } = useParams()
    const [selectVal1, setSelectVal1] = useState("airline")
    const [selectVal2, setSelectVal2] = useState("_iata")
    const [selectVal3, setSelectVal3] = useState("")
@@ -13,6 +15,7 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
    useEffect(() => {
       setPath("/"+inpRealtime)
    }, [inpRealtime])
+
    const setParams = () => {
       if (selectVal1) URLParams.type = selectVal1;
       if (selectVal2) URLParams.code = selectVal2;
@@ -41,11 +44,11 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
                </select>
             </div>
             <div className="">
-               <select value={selectVal3} onChange={e => {
-                                                      setSelectVal3(e.target.value);
-                                                      URLParams.sort = e.target.value;
-                                                      navigate(`${path}?${setParams()}`)
-                                                   }}>
+               <select value={selectVal3} disabled={!!id} onChange={e => {
+                     setSelectVal3(e.target.value);
+                     URLParams.sort = e.target.value;
+                     navigate(`${path}?${setParams()}`)
+                  }}>
                   <option value="" disabled>--sort--</option>
                   <option value='flight_number_a'>Flight ↑</option>
                   <option value='flight_number_d'>Flight ↓</option>
@@ -55,12 +58,15 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
          <div className="option-options-2">
             <div className="">
                <label>
-                  <input type="checkbox" />
+                  <input type="checkbox" disabled />
                   <span>Auto update</span>
                </label>
             </div>
             <div className="input-field">
-               <input placeholder="Enter query" id="inpRealtime" type="text" onChange={e => setInpRealtime(e.target.value?.toUpperCase())} />
+               <input placeholder="Enter query" id="inpRealtime" type="text"
+                  onKeyDown={handleEnter}
+                  onChange={e => setInpRealtime(e.target.value?.toUpperCase())}
+               />
             </div>
             <div className="input-field">
                <button className="btn-small teal lighten-1" onClick={e => navigate(`${path}?${setParams()}`)}>Go</button>

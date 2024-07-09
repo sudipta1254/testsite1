@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react'
 
-const FetchData = (url, KEY) => {
+const FetchData = (url) => {
    const [data, setData] = useState(null);
    const [loading, setLoading] = useState(true);
    const [error, setError] = useState(null);
 
    useEffect(() => {
       const abortCont = new AbortController();
+      setLoading(true)
 
       const fetchData = async () => {
-         console.log("Fetching..")
-         console.log(url)
          try {
             const response = await fetch(url, { signal: abortCont.signal });
             if (!response.ok) {

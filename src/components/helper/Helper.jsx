@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from "jquery"
 import { Country } from '../../assets/env'
 
 export const CountryName = (code) => {
@@ -44,4 +45,11 @@ export const SortFlight = (term, data) => {
          data?.sort(function(a, b) {
             return b[term?.slice(0,-2)] - a[term?.slice(0,-2)];
          });
+}
+
+export const handleEnter = (e) => {
+   if (e.key === 'Enter') {
+      e.preventDefault();
+      $("button").trigger("click");
+   }
 }

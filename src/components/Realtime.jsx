@@ -2,7 +2,6 @@ import React from 'react'
 import { useParams, useSearchParams } from 'react-router-dom';
 import FetchData from "./fetch/FetchData"
 import DataRealtime from "./processData/DataRealtime"
-import { SortFlight } from './helper/Helper';
 
 const Realtime = () => {
    const { id } = useParams();
@@ -15,13 +14,11 @@ const Realtime = () => {
 
    let { error, loading, data } = FetchData(`https://airlabs.co/api/v9/flights?api_key=${KEY}&${type}${code}=${id}`)
 
-   if (sort) SortFlight(sort, data?.response)
-
    return (
       <div className="Realtime">
-         { error && <div>{ error }</div> }
-         { loading && <div>Loading...</div> }
-         { data && <DataRealtime data={data} /> }
+         { error && <div className="center">{ error }</div> }
+         { loading && <div className="center">Loading...</div> }
+         { data.error && <DataRealtime data={data} sort={sort} /> }
       </div>
    );
 }

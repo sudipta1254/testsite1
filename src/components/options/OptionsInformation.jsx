@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import M from "materialize-css";
+import { handleEnter } from '../helper/Helper';
 
 const OptionsInformation = ({ inpInformation, setInpInformation }) => {
    const URLParams = {};
@@ -31,14 +32,17 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
             </div>
             <div className="">
                <label>
-                  <input type="checkbox" />
+                  <input type="checkbox" disabled />
                   <span>Auto update</span>
                </label>
             </div>
          </div>
          <div className="option-options-2">
             <div className="input-field">
-               <input placeholder="Enter query" id="inpInformation" type="text"  onChange={e => setInpInformation(e.target.value?.toUpperCase())}/>
+               <input placeholder="Enter query" id="inpInformation" type="text"
+                  onKeyDown={handleEnter}
+                  onChange={e => setInpInformation(e.target.value?.toUpperCase())}
+               />
             </div>
             <div className="input-field">
                <button className="btn-small teal lighten-1"  onClick={e => navigate(`${path}?${setParams()}`)}>Go</button>

@@ -18,8 +18,11 @@ const Footer = () => {
                   <ul className="">
                      <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//sudipta1254.github.io/linkline">Sudipto</a></li>
                      <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//airlabs.co">Airlabs.co</a></li>
-                     <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//github.com/sudipta1254/flights">Project on GitHub</a></li>
+                     <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//github.com/sudipta1254/testsite1">Project on GitHub</a></li>
                   </ul>
+               </div>
+               <div className="col l4">
+                  <p className="">Contribute in this project to make it better.</p>
                </div>
             </div>
          </div>
