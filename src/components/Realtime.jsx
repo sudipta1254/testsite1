@@ -16,8 +16,8 @@ const Realtime = () => {
 
    return (
       <div className="Realtime">
-         { error && <div className="center">{ error }</div> }
-         { loading && <div className="center">Loading...</div> }
+         { error && <b className="error-text">{ error }</b> }
+         { loading && <div id="msgBox"></div> }
          { data && <DataRealtime data={data} sort={sort} /> }
       </div>
    );

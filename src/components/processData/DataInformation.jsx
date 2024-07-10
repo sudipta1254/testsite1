@@ -6,8 +6,8 @@ const DataInformation = ({ data }) => {
    
    return (
       <div className="DataInformation">
-         { data.error && <b className="center">{ data.error.message }</b> }
-         { !Object.keys(dts).length && <em className="center">No data found!</em> }
+         { data.error && <b className="error-text">{ data.error.message }</b> }
+         { !Object.keys(dts).length && <b className="error-text">No data found!</b> }
          { Object.keys(dts).length &&
             <div id="data">
                { <h6 className="center text-underline">Departure</h6> }

@@ -8,8 +8,8 @@ const DataRealtime = ({ data, sort }) => {
    
    return (
       <div className="DataRealtime">
-         { data.error && <b className="centere">{ data.error.message }</b> }
-         { !dts.length ? <em className="center">No data found!</em> :
+         { data.error && <b className="error-text">{ data.error.message }</b> }
+         { !dts.length ? <b className="error-text">No data found!</b> :
             <div id="data">
                {dts.map((d, i) => (
                   <div key={i}>
