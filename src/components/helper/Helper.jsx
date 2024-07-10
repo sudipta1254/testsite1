@@ -53,6 +53,7 @@ export const handleEnter = (e) => {
          return
       }
       e.preventDefault();
+      e.target.blur()
       $(".btn-enter").trigger("click");
    }
 }
