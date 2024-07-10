@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import M from "materialize-css"
 
 const Chart = () => {
+   useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
+   
    return (
       <div className="Chart">
          <input type="search" /> <button>Get graph</button> <br />

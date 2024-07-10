@@ -45,7 +45,9 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
                />
             </div>
             <div className="input-field">
-               <button className="btn-small teal lighten-1"  onClick={e => navigate(`${path}?${setParams()}`)}>Go</button>
+               <div className="btn-enter btn-small teal lighten-1"  onClick={e => navigate(`${path}?${setParams()}`)}>Go
+                  <i className="material-icons right">search</i>
+               </div>
             </div>
          </div>
       </div>

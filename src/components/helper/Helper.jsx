@@ -35,7 +35,6 @@ export const Interval = (t) => {
 }
 
 export const SortFlight = (term, data) => {
-   console.log('helper',term, data)
    if(term)
       if(term?.includes('_a'))
          data?.sort(function(a, b) {
@@ -49,7 +48,27 @@ export const SortFlight = (term, data) => {
 
 export const handleEnter = (e) => {
    if (e.key === 'Enter') {
+      if(!e.target.value?.trim()) {
+         alert("Enter data to continue..")
+         return
+      }
       e.preventDefault();
-      $("button").trigger("click");
+      $(".btn-enter").trigger("click");
+   }
+}
+
+export const Distance = (dep, arr, x) => {
+   $('#line').css('width', x+'%');
+
+   if(x > -1) {
+      return (
+         <span id='distance'>
+            <span id='dep'>{ dep }</span>
+            <span id='line-p'>
+               <span id='line'></span>
+            </span>
+            <span id='arr'>{ arr }</span>
+         </span>
+      )
    }
 }
