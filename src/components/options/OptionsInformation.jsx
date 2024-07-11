@@ -7,7 +7,7 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
    const URLParams = {};
    const navigate = useNavigate()
    const [path, setPath] = useState("")
-   const [selectVal, setSelectVal] = useState("_iata")
+   const [selectVal, setSelectVal] = useState("flight_iata")
    
    useEffect(() => {
       setPath("/info/"+inpInformation)
@@ -26,8 +26,8 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
          <div className="option-options-1 ">
             <div className="">
                <select onChange={e => setSelectVal(e.target.value)}>
-                  <option value="_iata" className="left">Flight IATA</option>
-                  <option value="_icao" className="left">Flight ICAO</option>
+                  <option value="flight_iata" className="left">Flight IATA</option>
+                  <option value="flight_icao" className="left">Flight ICAO</option>
                </select>
             </div>
             <div className="">

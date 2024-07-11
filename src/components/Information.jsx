@@ -10,7 +10,7 @@ const Information = () => {
    const KEY = id ? process.env.REACT_APP_KEY1 : "";
    const code = searchParams.get("code");
 
-   let { error, loading, data } = FetchData(`https://airlabs.co/api/v9/flight?api_key=${KEY}&flight${code}=${id}`)
+   let { error, loading, data } = FetchData(`https://airlabs.co/api/v9/flight?api_key=${KEY}&${code}=${id}`)
 
    return (
       <div className="Information">

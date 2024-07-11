@@ -59,14 +59,12 @@ export const handleEnter = (e) => {
 }
 
 export const Distance = (dep, arr, x) => {
-   $('#line').css('width', x+'%');
-
    if(x > -1) {
       return (
          <span id='distance'>
             <span id='dep'>{ dep }</span>
             <span id='line-p'>
-               <span id='line'></span>
+               <span id='line' style={{width:`${x}%`}}></span>
             </span>
             <span id='arr'>{ arr }</span>
          </span>
