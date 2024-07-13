@@ -60,6 +60,7 @@ export const handleEnter = (e, target = ".btn-enter") => {
 
 export const Distance = (dep, arr, x) => {
    if(x > -1) {
+      document.documentElement.style.setProperty("--smiley-margin", `-15px 0 0 ${x+1}%`);
       return (
          <span id='distance'>
             <span id='dep'>{ dep }</span>
