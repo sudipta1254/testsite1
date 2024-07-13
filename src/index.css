@@ -131,6 +131,11 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
+}
+.GenAI .message-text {
+  margin: 10px auto;
+  text-align: center;
 }
 #GenAI-input {
   width: 70%;

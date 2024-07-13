@@ -46,7 +46,7 @@ export const SortFlight = (term, data) => {
          });
 }
 
-export const handleEnter = (e) => {
+export const handleEnter = (e, target = ".btn-enter") => {
    if (e.key === 'Enter') {
       if(!e.target.value?.trim()) {
          alert("Enter data to continue..")
@@ -54,7 +54,7 @@ export const handleEnter = (e) => {
       }
       e.preventDefault();
       e.target.blur()
-      $(".btn-enter").trigger("click");
+      $(target).trigger("click");
    }
 }
 
