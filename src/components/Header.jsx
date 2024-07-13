@@ -8,7 +8,7 @@ const flex = {display:"flex",alignItems:"center",justifyContent:"space-between"}
 
 const Header = () => {
    $(function() {
-      $('.navlink-realtime, .navlink-information, .navlink-chart').on('click', e => {
+      $('.header-navlink').on('click', e => {
          M.Sidenav.getInstance($('.sidenav')).close()
       })
    })
@@ -26,9 +26,10 @@ const Header = () => {
          </div>
          <ul className="sidenav" id="slide-nav">
             <li><a className="subheader" href="#!">More options</a></li>
-            <li><Link className="navlink-realtime" to="/">Realtime</Link></li>
-            <li><Link className="navlink-information" to="/info">Information</Link></li>
-            <li><Link className="navlink-chart" to="/chart/bbi">Weather info</Link></li>
+            <li><Link className="header-navlink navlink-realtime" to="/">Realtime</Link></li>
+            <li><Link className="header-navlink navlink-information" to="/info">Information</Link></li>
+            <li><Link className="header-navlink navlink-genai" to="/genai">Generative AI</Link></li>
+            <li><Link className="header-navlink navlink-chart" to="/chart/bbi">Weather info</Link></li>
          </ul>
       </header>
    );

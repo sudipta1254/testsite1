@@ -7,6 +7,7 @@ import NotFound from './NotFound';
 import Realtime from "./Realtime"
 import Information from './Information';
 import Chart from "./helper/Chart"
+import GenAI from './helper/GenAI';
 
 const Main = () => {
    const [inpRealtime, setInpRealtime] = useState(null)
@@ -29,6 +30,13 @@ const Main = () => {
                   <>
                      <OptionsInformation inpInformation={inpInformation} setInpInformation={setInpInformation} />
                      <Home option="information" />
+                  </>
+               }
+               />
+               <Route exact path="/genai"
+               element={
+                  <>
+                     <GenAI />
                   </>
                }
                />
