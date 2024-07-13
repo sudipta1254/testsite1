@@ -16,8 +16,8 @@
 ### In this application user can fetch:
 * Airline information through:
   * Airline IATA/ICAO :small_airplane: - All* flights of the particular airline
-  * Arrival ICAO/IATA :airplane_arrival: - All* arriving flight to the airport
-  * Departure ICAO/IATA :airplane_departure: - All* departing flights from the airport
+  * Arrival ICAO/IATA :flight_arrival: - All* arriving flight to the airport
+  * Departure ICAO/IATA :flight_departure: - All* departing flights from the airport
 * Flight information through:
   * Flight ICAO/IATA :airplane: - Information* about the flight
 <br>
