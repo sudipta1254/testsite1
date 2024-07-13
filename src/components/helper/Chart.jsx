@@ -123,7 +123,7 @@ const ChartComp = () => {
    return (
       <div className="Chart container">
          <input type="search" /> <button type="button">Get graph</button> <br />
-         <b>Loading..</b>
+         <b style={{display:"none"}}>Loading..</b>
          <canvas id="myChart" style={{width:"100%",maxWidth:"600px",height:"300px"}}></canvas>
       </div>
    );

@@ -120,6 +120,23 @@ hr {
 }
 
 
+/* GenAI */
+
+.GenAI {
+  font-size: large;
+}
+.GenAI .input-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#GenAI-input {
+  width: 70%;
+}
+
+
 /* Footer */
 
 footer {
@@ -211,14 +228,10 @@ footer {
     transform: rotate(360deg);
   }
 }
-.GenAI {
-  font-size: large;
-}
 
 
 /* Chart */
 b {
-  display: none;
   text-align: center
 }
 input {
