@@ -132,6 +132,8 @@ hr {
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  border-radius: 5rem;
+  background: #ece9e9;
 }
 .GenAI .message-text {
   margin: 10px auto;
@@ -140,6 +142,37 @@ hr {
 #GenAI-input {
   width: 70%;
 }
+.GenAI-btn {
+  color: #999;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+}
+.GenAI-btn:active {
+  background: #ccc;
+}
+
+.markdown-container {
+  padding: 0 10px;
+  background: #ece9e9;
+  border-radius: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word; /* Ensures that long breakable words wrap */
+}
+.markdown-container * {
+  white-space: normal; /* Default for all elements */
+}
+.markdown-container code {
+  white-space: nowrap; /* Prevent wrapping for code blocks */
+  display: inline-block;
+}
+.markdown-container pre {
+  white-space: pre-wrap; /* Allow wrapping within pre-formatted blocks */
+}
+
 
 
 /* Footer */

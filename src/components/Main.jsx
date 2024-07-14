@@ -6,8 +6,8 @@ import OptionsInformation from './options/OptionsInformation';
 import NotFound from './NotFound';
 import Realtime from "./Realtime"
 import Information from './Information';
-import Chart from "./helper/Chart"
-import GenAI from './helper/GenAI';
+import Chart from "./weather/Chart"
+import GenAI from './genAI/GenAI';
 
 const Main = () => {
    const [inpRealtime, setInpRealtime] = useState(null)
@@ -17,7 +17,7 @@ const Main = () => {
       <div className="Main">
          <div className='container'>
             <Routes>
-               <Route exact path="/"
+               <Route path="/"
                element={
                   <>
                      <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
@@ -25,7 +25,7 @@ const Main = () => {
                   </>
                }
                />
-               <Route exact path="/info"
+               <Route path="/info"
                element={
                   <>
                      <OptionsInformation inpInformation={inpInformation} setInpInformation={setInpInformation} />
@@ -33,19 +33,10 @@ const Main = () => {
                   </>
                }
                />
-               <Route exact path="/genai"
-               element={
-                  <>
-                     <GenAI />
-                  </>
-               }
-               />
-               <Route exact path="/chart/:id"
-               element={
-                  <Chart />
-               }
-               />
-               <Route exact path="/:id"
+               <Route path="/genai" element={ <NotFound /> } />
+               <Route path="/genai/prompt" element={ <GenAI /> } />
+               <Route path="/chart/:id" element={ <Chart /> } />
+               <Route path="/:id"
                element={
                   <>
                      <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
@@ -53,7 +44,7 @@ const Main = () => {
                   </>
                }
                />
-               <Route exact path="/info/:id"
+               <Route path="/info/:id"
                element={
                   <>
                      <OptionsInformation inpInformation={inpInformation} setInpInformation={setInpInformation} />

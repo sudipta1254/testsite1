@@ -28,7 +28,7 @@ const Header = () => {
             <li><a className="subheader" href="#!">More options</a></li>
             <li><Link className="header-navlink navlink-realtime" to="/">Realtime</Link></li>
             <li><Link className="header-navlink navlink-information" to="/info">Information</Link></li>
-            <li><Link className="header-navlink navlink-genai" to="/genai">Generative AI</Link></li>
+            <li><Link className="header-navlink navlink-genai" to="/genai/prompt">Generative AI</Link></li>
             <li><Link className="header-navlink navlink-chart" to="/chart/bbi">Weather info</Link></li>
          </ul>
       </header>

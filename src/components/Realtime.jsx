@@ -7,7 +7,7 @@ const Realtime = () => {
    const { id } = useParams();
    const [searchParams] = useSearchParams()
 
-   const KEY = id ? process.env.REACT_APP_KEY1 : "";
+   const KEY = process.env.REACT_APP_AIR_DEV || process.env.REACT_APP_AIR_PROD;
    const type = searchParams.get("type");
    const code = searchParams.get("code");
    const sort = searchParams.get("sort");
