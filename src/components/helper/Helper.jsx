@@ -72,3 +72,18 @@ export const Distance = (dep, arr, x) => {
       )
    }
 }
+
+export const setHeaderNFavicon = (title) => {
+   const link = document.querySelector("link[rel~='icon']"),
+      iconUrl = "../../assets/icon1.png";
+   if (title)
+      document.title = title;
+   if (!link) {
+      const newLink = document.createElement('link');
+      newLink.rel = 'icon';
+      newLink.href = iconUrl;
+      document.head.appendChild(newLink);
+   } else {
+      link.href = iconUrl;
+   }
+};

@@ -65,7 +65,7 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
                </label>
             </div>
             <div className="input-field">
-               <input placeholder="Enter query" id="inpRealtime" type="text"
+               <input placeholder="Enter query" id="inpRealtime" type="search"
                   onKeyDown={handleEnter}
                   onChange={e => setInpRealtime(e.target.value?.toUpperCase())}
                />

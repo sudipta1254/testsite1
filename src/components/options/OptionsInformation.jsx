@@ -22,8 +22,6 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
       return new URLSearchParams(URLParams).toString();
    }
    
-   // useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
-   
    return (
       <div className="optionsInformation option-tab options">
          <label>Select from:</label>
@@ -43,7 +41,7 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
          </div>
          <div className="option-options-2">
             <div className="input-field">
-               <input placeholder="Enter query" id="inpInformation" type="text"
+               <input placeholder="Enter query" id="inpInformation" type="search"
                   onKeyDown={handleEnter}
                   onChange={e => setInpInformation(e.target.value?.toUpperCase())}
                />

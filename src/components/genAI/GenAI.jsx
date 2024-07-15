@@ -3,7 +3,7 @@ import M from "materialize-css"
 import MarkDown from "react-markdown"
 import "materialize-css/dist/css/materialize.min.css"
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { handleEnter } from "../helper/Helper"
+import { handleEnter, setHeaderNFavicon } from "../helper/Helper"
 import "../../index.css"
 
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GENAI_KEY);
@@ -11,7 +11,7 @@ const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GENAI_KEY);
 const GenAI = () => {
    useEffect(() => {
       M.AutoInit();
-      document.title = "Gemini 1.5 Flash";
+      setHeaderNFavicon("Gemini 1.5 Flash")
    }, [])
    const [input, setInput] = useState(null)
    const [data, setData] = useState(null)
