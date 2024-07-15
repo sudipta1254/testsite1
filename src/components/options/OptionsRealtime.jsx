@@ -15,6 +15,10 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
    useEffect(() => {
       setPath("/"+inpRealtime)
    }, [inpRealtime])
+   useEffect(() => {
+      M.AutoInit();                          /* Auto initialize materialize css */
+      document.title = "Flights - Realtime";
+   }, [])
 
    const setParams = () => {
       if (selectVal1) URLParams.type = selectVal1;
@@ -23,9 +27,7 @@ const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
       
       return new URLSearchParams(URLParams).toString();
    }
-   
-   useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
-   
+
    return (
       <div className="optionsRealtime option-tab options">
          <label>Select from:</label>

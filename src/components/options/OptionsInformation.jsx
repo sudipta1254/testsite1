@@ -11,14 +11,18 @@ const OptionsInformation = ({ inpInformation, setInpInformation }) => {
    
    useEffect(() => {
       setPath("/info/"+inpInformation)
-   }, [inpInformation])
+   }, [inpInformation]);
+   useEffect(() => {
+      M.AutoInit();                             /* Auto initialize materialize css */
+      document.title = "Flights - Information";
+   }, [])
    const setParams = () => {
       if (selectVal) URLParams.code = selectVal;
       
       return new URLSearchParams(URLParams).toString();
    }
    
-   useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
+   // useEffect(() => { M.AutoInit() }, []);  /* Auto initialize materialize css */
    
    return (
       <div className="optionsInformation option-tab options">

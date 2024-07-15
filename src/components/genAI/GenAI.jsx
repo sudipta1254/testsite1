@@ -9,7 +9,10 @@ import "../../index.css"
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GENAI_KEY);
 
 const GenAI = () => {
-   useEffect(() => M.AutoInit(), []);
+   useEffect(() => {
+      M.AutoInit();
+      document.title = "Gemini 1.5 Flash";
+   }, [])
    const [input, setInput] = useState(null)
    const [data, setData] = useState(null)
    const [error, setError] = useState(null)

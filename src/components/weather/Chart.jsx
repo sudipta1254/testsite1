@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../../index.css"
 import $ from "jquery"
 import Chart from "chart.js/auto"
 
 const ChartComp = () => {
+   useEffect(() => {
+      document.title = "Flights - Weather";
+   }, []);
+
    function init() {
       const dy = new Date()
       const currDay = dy.toISOString().split("T")[0]
