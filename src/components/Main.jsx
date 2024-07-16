@@ -6,7 +6,7 @@ import OptionsInformation from './options/OptionsInformation';
 import NotFound from './NotFound';
 import Realtime from "./Realtime"
 import Information from './Information';
-import Chart from "./weather/Chart"
+import Weather from './weather/Weather';
 import GenAI from './genAI/GenAI';
 
 const Main = () => {
@@ -35,7 +35,7 @@ const Main = () => {
                />
                <Route path="/genai" element={ <NotFound /> } />
                <Route path="/genai/prompt" element={ <GenAI /> } />
-               <Route path="/chart/:id" element={ <Chart /> } />
+               <Route path="/weather" element={ <Weather /> } />
                <Route path="/:id"
                element={
                   <>

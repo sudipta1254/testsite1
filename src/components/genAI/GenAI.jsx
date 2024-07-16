@@ -30,6 +30,7 @@ const GenAI = () => {
          const result = await model.generateContent(prompt);
          const response = result.response;
          const text = response.text();
+         console.log(text)
          setData(text)
          setError(null)
          setLoading(false)
@@ -49,9 +50,12 @@ const GenAI = () => {
                onKeyDown={ e => handleEnter(e, ".GenAI-btn") }
                onChange={ e => setInput(e.target.value?.trim()) }
             />
-            <button className="GenAI-btn" onClick={ generateContent }>
+            <i className="material-icons GenAI-btn" type="button"
+               onClick={ generateContent }
+            >send</i>
+            {/* <button className="GenAI-btn" onClick={ generateContent }>
                <i className="material-icons">send</i>
-            </button>
+            </button> */}
          </div>
          <div className="message-text">
             { error }

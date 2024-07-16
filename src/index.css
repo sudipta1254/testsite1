@@ -8,14 +8,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  flex: 1 0 auto;
+.Main {
+  margin: 4.5rem auto 0;
 }
 
 
 /* Header */
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   width: 100%;
   height: 4.2rem;
   display: flex;
@@ -23,7 +27,7 @@ header {
   padding: 0 2rem;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 -10px red;
+  box-shadow: 2px 2px 10px #bbb;
 }
 header .app-logo-text {
   display: flex;
@@ -31,6 +35,15 @@ header .app-logo-text {
 }
 header img, footer img {
   width: 4rem;
+}
+header .sidenav-trigger {
+  display: flex;
+}
+header .sidenav-overlay {
+  z-index: 999;
+}
+header .sidenav {
+  z-index: 1001;
 }
 .app-logo-text a {
   color: #388E3C !important;
@@ -42,6 +55,9 @@ header span {
   position: absolute;
   right: 20px;
 }
+
+
+/* Options */
 
 .options {
   margin: 1rem auto 0;
@@ -122,7 +138,8 @@ hr {
 
 /* GenAI */
 
-.GenAI {
+.GenAI.container {
+  margin: 6rem auto 0;
   font-size: large;
 }
 .GenAI .input-container {
@@ -130,7 +147,7 @@ hr {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
   border-radius: 5rem;
   background: #ece9e9;
@@ -141,14 +158,18 @@ hr {
 }
 #GenAI-input {
   width: 80%;
+  margin-left: 1rem;
 }
-.GenAI-btn {
-  color: #999;
+.GenAI .GenAI-btn {
   width: 3rem;
   height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  border-color: transparent;
-  background-color: transparent;
+  color: #999;
+  cursor: pointer;
+  background: #ece9e9;
 }
 .GenAI-btn:active {
   background: #ccc;
@@ -159,7 +180,7 @@ hr {
   background: #ece9e9;
   border-radius: 1rem;
   max-width: 100%;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   word-wrap: break-word; /* Ensures that long breakable words wrap */
 }
 .markdown-container * {
@@ -176,17 +197,21 @@ hr {
 
 /* Weather Chart */
 
-.Chart .chart-input-container {
+.Weather.container {
+  margin: 6rem auto 0;
+}
+
+.Weather .chart-input-container {
   width: 90%;
   margin: 2rem auto 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.Chart #chart-input {
+.Weather #chart-input {
   width: 75%;
 }
-.Chart .chart-button {
+.Weather .chart-button {
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -205,6 +230,7 @@ hr {
 footer {
   margin: 5rem 0 0;
   font-size: large;
+  box-shadow: 0 -5px 10px #bbb;
 }
 .footer-main {
   margin: auto;
@@ -269,7 +295,6 @@ footer {
 }
 
 #msgBox {
-  /* display: none; */
   width: 30px;
   height: 30px;
   padding: 0;
@@ -296,6 +321,10 @@ footer {
     border-top-color: #4285F4; /* Back to initial color at 100% of animation */
     transform: rotate(360deg);
   }
+}
+
+.NotFound {
+  margin: 8rem auto;
 }
 
 

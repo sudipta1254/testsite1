@@ -5,7 +5,7 @@ import Chart from "chart.js/auto";
 import { init } from './WeatherChartData';
 import { handleEnter, setHeaderNFavicon } from '../helper/Helper';
 
-const ChartComp = () => {
+const Weather = () => {
    const [input, setInput] = useState(null);
    const [loading, setLoading] = useState(false);
    const [chartData, setChartData] = useState({ yV1: [], yV2: [], location: null });
@@ -90,7 +90,8 @@ const ChartComp = () => {
    }, [chartData]);
 
    return (
-      <div className="Chart container center">
+      <div className="Weather container center">
+         <h3>Weather Information</h3>
          <div className="chart-input-container">
             <input
                type="search" id="chart-input"
@@ -108,4 +109,4 @@ const ChartComp = () => {
    );
 };
 
-export default ChartComp;
+export default Weather;

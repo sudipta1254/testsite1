@@ -29,7 +29,7 @@ const Header = () => {
             <li><Link className="header-navlink navlink-realtime" to="/">Realtime</Link></li>
             <li><Link className="header-navlink navlink-information" to="/info">Information</Link></li>
             <li><Link className="header-navlink navlink-genai" to="/genai/prompt">Generative AI</Link></li>
-            <li><Link className="header-navlink navlink-chart" to="/chart/bbi">Weather info</Link></li>
+            <li><Link className="header-navlink navlink-chart" to="/weather">Weather info</Link></li>
          </ul>
       </header>
    );
