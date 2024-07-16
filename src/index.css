@@ -222,6 +222,15 @@ hr {
   cursor: pointer;
   background: #ece9e9;
 }
+.Weather .chart-container {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+}
+.Weather #myChart {
+  width: 100%;
+  height: 100%;
+}
 
 
 
@@ -298,7 +307,7 @@ footer {
   width: 30px;
   height: 30px;
   padding: 0;
-  margin: 10px auto 0;
+  margin: 10px auto;
   border-radius: 50%;
   border: 2.5px solid transparent;
   border-top-color: #4285F4;

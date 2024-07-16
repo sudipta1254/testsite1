@@ -103,8 +103,10 @@ const Weather = () => {
                onClick={e => init(input, setLoading, setChartData)}
             >search</i>
          </div>
-         { loading && <b id="chart-loading" >Loading..</b> }
-         <canvas id="myChart" style={{ width: "100%", maxWidth: "600px", height: "300px" }}></canvas>
+         { loading && <div id="msgBox"></div> }
+         <div className="chart-container" style={{ width: "100%", maxWidth: "600px", height: "300px" }}>
+            <canvas id="myChart" style={{ width: "100%", height: "100%" }}></canvas>
+         </div>
       </div>
    );
 };
