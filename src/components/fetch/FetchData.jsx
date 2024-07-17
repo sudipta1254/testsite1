@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import axios from "axios"
 
 const FetchData = (url) => {
    const [data, setData] = useState(null);
@@ -11,20 +12,16 @@ const FetchData = (url) => {
 
       const fetchData = async () => {
          try {
-            const response = await fetch(url, { signal: abortCont.signal });
-            if (!response.ok) {
-               throw new Error('Network response was not ok');
-            }
-            const result = await response.json();
-            if (result.error) {
-               throw new Error(result.error.message);
-            }
+            const { data: result } = await axios.get(url, { signal: abortCont.signal });
             setData(result);
             setLoading(false)
             setError(null)
          } catch (err) {
+            console.log(err)
             if (err.name === 'AbortError') {
                console.log('fetch aborted')
+            } else if (err.name === 'CanceledError') {
+               console.log(err.code, err.message)
             } else {
                // auto catches network / connection error
                setData(null);
