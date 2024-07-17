@@ -53,13 +53,10 @@ const GenAI = () => {
             <i className="material-icons GenAI-btn" type="button"
                onClick={ generateContent }
             >send</i>
-            {/* <button className="GenAI-btn" onClick={ generateContent }>
-               <i className="material-icons">send</i>
-            </button> */}
          </div>
          <div className="message-text">
             { error }
-            { loading && "Loading.." }
+            { loading && <div id="msgBox"></div> }
          </div>
          <div className="markdown-container">
             <MarkDown>{ data }</MarkDown>

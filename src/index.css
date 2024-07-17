@@ -180,7 +180,7 @@ hr {
   background: #ece9e9;
   border-radius: 1rem;
   max-width: 100%;
-  /* overflow-x: auto; */
+  overflow-x: auto;
   word-wrap: break-word; /* Ensures that long breakable words wrap */
 }
 .markdown-container * {
@@ -200,7 +200,6 @@ hr {
 .Weather.container {
   margin: 6rem auto 0;
 }
-
 .Weather .chart-input-container {
   width: 90%;
   margin: 2rem auto 0;

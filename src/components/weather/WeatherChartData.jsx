@@ -26,12 +26,12 @@ export const init = async (input, setLoading, setChartData) => {
    const yV1 = [], yV2 = [];
    const api = `https://api.weatherapi.com/v1/forecast.json?q=${input}&key=${process.env.REACT_APP_WEATHER_KEY}&dt=`;
 
-   const dataPrevDay = await fetchData(api + prevDay);
+   const dataPrevDay = await fetchData(api + prevDay, setLoading);
    if (dataPrevDay) {
       dataPrevDay.forecast.forecastday[0].hour.forEach(h => yV2.push(Math.round(h.temp_c)));
    }
 
-   const dataCurrDay = await fetchData(api + currDay);
+   const dataCurrDay = await fetchData(api + currDay, setLoading);
    if (dataCurrDay) {
       const currentHour = new Date(dataCurrDay.current.last_updated_epoch);
       dataCurrDay.forecast.forecastday[0].hour.forEach(h => {

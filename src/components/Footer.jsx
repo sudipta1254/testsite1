@@ -18,6 +18,7 @@ const Footer = () => {
                   <ul className="">
                      <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//sudipta1254.github.io/linkline">Sudipto</a></li>
                      <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//airlabs.co">Airlabs.co</a></li>
+                     <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//weatherapi.com">Weatherapi.com</a></li>
                      <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//materializecss.com">Materialize CSS</a></li>
                      <li><a className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//github.com/sudipta1254/testsite1">Project on GitHub</a></li>
                   </ul>
