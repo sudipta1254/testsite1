@@ -13,16 +13,20 @@
 </p>
 
 ## About the project
-### In this application user can fetch:
+### In this application user can:
+#### <p>1. Track flights through:</p>
+
 * Airline information through:
   * Airline IATA/ICAO :small_airplane: - All* flights of the particular airline
   * Arrival ICAO/IATA :flight_arrival: - All* arriving flight to the airport
   * Departure ICAO/IATA :flight_departure: - All* departing flights from the airport
 * Flight information through:
   * Flight ICAO/IATA :airplane: - Information* about the flight
-<br>
+<p>* listed in the <a href="https://airlabs.co">airlabs.co</a> database.</p>
 
-\* listed in the <a href="https://airlabs.co">airlabs.co</a> database.
+#### <p>2. Generate AI prompts in <a href="https://ai.google.dev/gemini-api/docs/get-started/tutorial?lang=node">Gemini 1.5 Flash</a> Generative AI.</p>
+
+#### <p>3. Get weather data for any location with <a href="https://www.weatherapi.com">Weatherapi.com</a></p>
 
 ## Documentation
 To run the documentation locally on your machine, you need [Node.js](https://nodejs.org/en/) installed on your computer.
