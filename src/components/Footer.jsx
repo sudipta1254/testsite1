@@ -30,7 +30,7 @@ const Footer = () => {
          </div>
          <div className="footer-copyright">
             <div className="container green-text text-darken-2 center">
-               © { new Date().getFullYear() } Copyright
+               © { new Date().getFullYear() } Copyright | <a  className="green-text text-darken-2" rel="noreferrer" target="_blank" href="//sudipta1254.github.io/linkline"></a>
             </div>
          </div>
       </footer>
