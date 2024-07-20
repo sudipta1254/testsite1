@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import spark from "../../assets/spark.svg"
 import M from "materialize-css"
 import MarkDown from "react-markdown"
 import "materialize-css/dist/css/materialize.min.css"
@@ -44,7 +45,9 @@ const GenAI = () => {
 
    return (
       <div className="GenAI container">
-         <h2 className="center">Gemini 1.5 Flash</h2>
+         <h3 className="center">Gemini 1.5 Flash
+            <img src={spark} alt="spark" />
+         </h3>
          <div className="input-container">
             <input id="GenAI-input" type="text" placeholder="Enter prompt.."
                onKeyDown={ e => handleEnter(e, ".GenAI-btn") }

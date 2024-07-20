@@ -139,6 +139,8 @@ hr {
 /* GenAI */
 
 .GenAI.container {
+  width: 100%;
+  max-width: 800px;
   margin: 6rem auto 0;
   font-size: large;
 }
@@ -198,6 +200,8 @@ hr {
 /* Weather Chart */
 
 .Weather.container {
+  width: 100%;
+  max-width: 800px;
   margin: 6rem auto 0;
 }
 .Weather .chart-input-container {
