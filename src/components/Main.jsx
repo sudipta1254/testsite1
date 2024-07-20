@@ -8,6 +8,8 @@ import Realtime from "./Realtime"
 import Information from './Information';
 import Weather from './weather/Weather';
 import GenAI from './genAI/GenAI';
+import { SendLoginSignup } from './helper/Helper';
+import "../index.css"
 
 const Main = () => {
    const [inpRealtime, setInpRealtime] = useState(null)
@@ -19,10 +21,7 @@ const Main = () => {
             <Routes>
                <Route path="/"
                element={
-                  <>
-                     <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
-                     <Home option="realtime" />
-                  </>
+                  SendLoginSignup(inpRealtime, setInpRealtime)
                }
                />
                <Route path="/info"

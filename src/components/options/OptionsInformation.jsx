@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import M from "materialize-css";
 import { handleEnter } from '../helper/Helper';
+import "../../index.css"
 
 const OptionsInformation = ({ inpInformation, setInpInformation }) => {
    const URLParams = {};

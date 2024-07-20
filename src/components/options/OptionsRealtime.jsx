@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import M from "materialize-css";
 import { handleEnter } from '../helper/Helper';
+import "../../index.css"
 
 const OptionsRealtime = ({ inpRealtime, setInpRealtime }) => {
    const URLParams = {};
