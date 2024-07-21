@@ -8,7 +8,6 @@ import Realtime from "./Realtime"
 import Information from './Information';
 import Weather from './weather/Weather';
 import GenAI from './genAI/GenAI';
-import { SendLoginSignup } from './helper/Helper';
 import "../index.css"
 
 const Main = () => {
@@ -21,7 +20,10 @@ const Main = () => {
             <Routes>
                <Route path="/"
                element={
-                  SendLoginSignup(inpRealtime, setInpRealtime)
+                  <>
+                     <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
+                     <Home option={"realtime"} />
+                  </>
                }
                />
                <Route path="/info"

@@ -1,9 +1,6 @@
 import React from 'react'
 import $ from "jquery"
 import { Country } from '../../assets/env'
-import Login from "../user/Login"
-import OptionsRealtime from '../options/OptionsRealtime'
-import Home from '../Home'
 
 export const CountryName = (code) => {
    return Country[code]
@@ -90,18 +87,3 @@ export const setHeaderNFavicon = (title) => {
       link.href = iconUrl;
    }
 };
-
-export const SendLoginSignup = (inpRealtime, setInpRealtime) => {
-   const user = isUserLoggedIn();
-   return !user ?
-      <>
-         <OptionsRealtime inpRealtime={inpRealtime} setInpRealtime={setInpRealtime} />
-         <Home option="realtime" />
-      </> : <Login />;
-}
-
-export const isUserLoggedIn = () => {
-   const user = JSON.parse(localStorage.getItem("ftest"));
-   console.log("user loged in?", user);
-   return user;
-}
